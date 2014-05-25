@@ -3,6 +3,7 @@ layout: post
 title:  Suffering from the geek syndrome.
 date:   2014-05-25 16:12:30
 categories: learning programming
+comments: true
 ---
 
 First of all, this is just a rant, and a way to start writing something, anything. So, you can probably go away and do something better with your time. So that your visit is not wasted, [here's a really funny paper][funny-link] from the [funniest man in Microsoft research][funniest-man].
