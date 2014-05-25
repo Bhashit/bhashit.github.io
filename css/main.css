@@ -16,7 +16,7 @@ h2 { font-size: 125%; margin-bottom: .5em; }
 p { margin: 1em 0; }
 
 body {
-   background-color: #ecf0f1;
+   background-color: white;
    font: 13.34px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
    font-size: small;
    -webkit-font-smoothing: antialiased;
@@ -89,39 +89,41 @@ header a {
    color: #aaa;
 }
 
-code,
-pre {
+code, pre {
    font-family: Menlo, Monaco, "Courier New", monospace;
 }
+
 code {
-   padding: .25em .5em;
-   font-size: 75%;
-   color: #bf616a;
-   background-color: transparent;
-   border-radius: 3px;
+   padding: 2px 4px;
+   font-size: 90%;
+   color: #c7254e;
+   background-color: #f9f2f4;
+   border-radius: 4px;
 }
+
 pre {
    display: block;
-   margin: 0 0 14px;
-   padding: 10px 20px;
-   font-size: 15px;
-   line-height: 1.4;
-   white-space: pre;
-   white-space: pre-wrap;
+   padding: 10px;
+   margin: 0px 0px 10.5px;
+   font-size: 14px;
+   line-height: 1.42857;
    word-break: break-all;
    word-wrap: break-word;
-   background-color: #eee;
+   white-space: pre-wrap;
 }
+
 pre code {
    padding: 0;
-   font-size: 80%;
+   font-size: 90%;
    color: inherit;
    background-color: transparent;
 }
+
 .highlight {
    margin-bottom: 15px;
    border-radius: 4px;
 }
+
 .highlight pre {
    margin-bottom: 0;
 }
@@ -144,9 +146,9 @@ article {
 
 article ul, article ol {
    margin-left: 1.35em;
+   margin-bottom: 0.7em;
 }
 
-/* Rounded corners, aligned, etc. */
 article img {
    border-radius: 4px;
    -webkit-border-radius: 4px;
@@ -157,10 +159,6 @@ article img {
    max-width: 100%;
    vertical-align: middle;
    page-break-inside: avoid;
-}
-
-footer {
-   height: 2.5em;
 }
 
 footer #date {
@@ -177,4 +175,18 @@ footer #date {
 /* Remove the huge gap at the first paragraph */
 #home p.intro {
    margin-top: 0px;
+}
+
+.videoWrapper {
+   position: relative;
+   padding-bottom: 56.25%;
+   padding-top: 25px;
+   height: 0;
+}
+.videoWrapper iframe {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
 }
