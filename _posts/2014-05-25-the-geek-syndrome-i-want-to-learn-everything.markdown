@@ -22,6 +22,7 @@ So, after 5 years of this, or some variation thereof, here I am. I am finally pu
 However, my point here is that I suffer from what I think should probably be termed **The geek syndrome**. I want to learn everything. Even for the simplest of tasks, I go into a lot of details. Googling for things is not satisfying. I read documentation; I read books; I explore the source code. Even the videos don't quite work for me. I like them, but most of the time, they are just not detailed enough.
 
 I have been helping out on an [open-source project][bigtop] from Apache for the past few days. The project revolves around `hadoop`, `pig` and `mahout`. I didn't know much about `hadoop`. So, I decided to spend this weekend on doing some reading aorund it. This is how it went:
+
 1. Go the [`hadoop` website][hadoop] and download it.
 2. Read some docs on how to get started
 3. Ah, I don't want to make it run on single-node, I should know everything, so, I should probably setup a multi-node system using the two laptops and a PC that I own.
