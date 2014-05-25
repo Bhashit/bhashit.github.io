@@ -1,3 +1,10 @@
-name: Your New Jekyll Site
+name: Bhashit Parikh
 markdown: redcarpet
 pygments: true
+
+gems:
+- jemoji
+
+
+redcarpet:
+  extensions: [smart]
