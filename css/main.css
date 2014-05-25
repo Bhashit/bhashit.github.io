@@ -1,160 +1,180 @@
-/*****************************************************************************/
-/*
-/* Common
-/*
-/*****************************************************************************/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800&subset=latin,latin-ext);
 
-/* Global Reset */
+/* Some assumptions */
 * {
-  margin: 0;
-  padding: 0;
+   margin: 0;
+   padding: 0;
+
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
 }
 
-html, body { height: 100%; }
-
-body {
-  background-color: #FFF;
-  font: 13.34px Helvetica, Arial, sans-serif;
-  font-size: small;
-  text-align: center;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%; }
-
-h1 { margin-bottom: 1em; }
+html, body { height: auto; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+h2 { font-size: 125%; margin-bottom: .5em; }
 p { margin: 1em 0; }
 
-a         { color: #00a; }
-a:hover   { color: #000; }
-a:visited { color: #a0a; }
+body {
+   background-color: #ecf0f1;
+   font: 13.34px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-size: small;
+   -webkit-font-smoothing: antialiased;
+   text-align: center;
+}
 
-/*****************************************************************************/
-/*
-/* Home
-/*
-/*****************************************************************************/
+/* Gentle links */
+a { color: #3498DB; text-decoration: none; }
+a:hover { color: #2980B9; }
+
+/* The blog posts archive, a long list */
 .posts {
-  list-style-type: none;
-  margin-bottom: 2em;
+   list-style-type: none;
+   margin-bottom: 2em;
 }
 
 .posts li {
-  line-height: 1.75em;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   line-height: 2em;
 }
 
 .posts span {
-  color: #aaa;
-  font-family: Monaco, "Courier New", monospace;
-  font-size: 80%;
+   color: #aaa;
+   font-family: Monaco, "Courier New", monospace;
+   font-size: 75%;
+   margin-right: 1em;
 }
 
-/*****************************************************************************/
-/*
-/* Site
-/*
-/*****************************************************************************/
-
-.site {
-  font-size: 115%;
-  text-align: justify;
-  width: 42em;
-  margin: 3em auto 2em;
-  line-height: 1.5em;
+/* Don't display date if screen is small */
+@media only screen and (max-width: 400px) {
+   .posts li span { display: none; }
 }
 
-.header a {
-  font-weight: bold;
-  text-decoration: none;
+main {
+   font-size: 115%;
+   text-align: left;
+   margin: 2em auto 0.5em;
+   line-height: 1.5em;
+   max-width: 42em;
+   padding-left: 18px;
+   padding-right: 18px;
 }
 
+header a {
+   font-weight: bold;
+   text-decoration: none;
+}
+
+/* the website's name on the header */
 .title {
-  display: inline-block;
-  margin-bottom: 2em;
+   display: inline-block;
+   line-height: 0.5em;
 }
 
 .title a {
-  color: #a00;
+   color: #e74c3c;
 }
 
 .title a:hover {
-  color: #000;
+   color: #000;
 }
 
-.header a.extra {
-  color: #aaa;
-  margin-left: 1em;
-}
-
-.header a.extra:hover {
-  color: #000;
+.title {
+   margin-top: .4em;
 }
 
 .meta {
-  color: #aaa;
+   color: #aaa;
 }
 
-.footer {
-  font-size: 80%;
-  color: #666;
-  border-top: 4px solid #eee;
-  margin-top: 2em;
-  overflow: hidden;
+code,
+pre {
+   font-family: Menlo, Monaco, "Courier New", monospace;
+}
+code {
+   padding: .25em .5em;
+   font-size: 75%;
+   color: #bf616a;
+   background-color: transparent;
+   border-radius: 3px;
+}
+pre {
+   display: block;
+   margin: 0 0 14px;
+   padding: 10px 20px;
+   font-size: 15px;
+   line-height: 1.4;
+   white-space: pre;
+   white-space: pre-wrap;
+   word-break: break-all;
+   word-wrap: break-word;
+   background-color: #eee;
+}
+pre code {
+   padding: 0;
+   font-size: 80%;
+   color: inherit;
+   background-color: transparent;
+}
+.highlight {
+   margin-bottom: 15px;
+   border-radius: 4px;
+}
+.highlight pre {
+   margin-bottom: 0;
 }
 
-.footer .contact {
-  float: left;
-  margin-right: 3em;
+blockquote {
+   padding: 0px 18px;
+   margin: 15px 0;
+   border-left: 4px solid rgba(52, 73, 94, 0.85);
 }
 
-.footer .contact a {
-  color: #8085C1;
+blockquote p {
+   margin-bottom: 0;
+   color: #7a7a7a;
 }
 
-.footer .rss {
-  margin-top: 1.1em;
-  margin-right: -.2em;
-  float: right;
+article {
+   overflow: auto;
+   word-wrap: break-word;
 }
 
-.footer .rss img {
-  border: 0;
+article ul, article ol {
+   margin-left: 1.35em;
 }
 
-/*****************************************************************************/
-/*
-/* Posts
-/*
-/*****************************************************************************/
-
-/* standard */
-.post pre {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 .4em;
+/* Rounded corners, aligned, etc. */
+article img {
+   border-radius: 4px;
+   -webkit-border-radius: 4px;
+   -moz-border-radius: 4px;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   max-width: 100%;
+   vertical-align: middle;
+   page-break-inside: avoid;
 }
 
-.post ul, .post ol {
-  margin-left: 1.35em;
+footer {
+   height: 2.5em;
 }
 
-.post code {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 .2em;
+footer #date {
+   float: right;
 }
 
-.post pre code {
-  border: none;
+footer #return,
+footer #date {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
 }
 
-/* terminal */
-.post pre.terminal {
-  border: 1px solid #000;
-  background-color: #333;
-  color: #FFF;
-}
-
-.post pre.terminal code {
-  background-color: #333;
+/* Remove the huge gap at the first paragraph */
+#home p.intro {
+   margin-top: 0px;
 }

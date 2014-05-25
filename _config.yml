@@ -1,6 +1,7 @@
 name: Bhashit Parikh
 markdown: redcarpet
 pygments: true
+comments: true
 
 gems:
 - jemoji
