@@ -1,7 +1,8 @@
-name: Bhashit Parikh
+name: Bhashit Parikh's blog
+description: Bhashit Parikh's blog. Programming, Learning, Books and Ranting.
+url: http://bhashit.github.io
 markdown: redcarpet
 pygments: true
-comments: true
 
 gems:
 - jemoji
