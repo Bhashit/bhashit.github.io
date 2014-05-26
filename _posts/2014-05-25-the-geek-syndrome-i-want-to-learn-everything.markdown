@@ -32,11 +32,22 @@ I have been helping out on an [open-source project][bigtop] from Apache for the 
 5. Oh, I recently read somewhere that [`MapReduce`][mapreduce] is quite old. There are faster solutions out there. Read a little bit about [`spark`][spark]. Find articles comparing the two.
 6. Should I really spend so much time on [`hadoop`][hadoop]? I want to learn more about `AI` and stuff. That's why I am learning the `Lisp` family of languages.
 
-The end result is that I feel like I need to spend a lot more time on `hadoop` if I want to use it. I am not really complaining. I like the way I am. I like learning. I like reading. These two are the reasons I am reasonably successful at what I do. And I never get bored, ever. However, I think I should prioritize what want to learn in details. I actually do that all the time. But the thing is, I have to spend some effort trying to convince myself that this is not my highest priority right now.
+The end result is that I feel like I need to spend a lot more time on `hadoop` if I want to use it. I am not really complaining. I like learning. I like reading. These two are the reasons I am reasonably successful at what I do. And I never get bored, ever. However, I think I should prioritize what I learn in details. I actually do that all the time. But the thing is, I have to spend some effort trying to convince myself that this is not my highest priority right now.
 
-Generally, I deal with this syndrome by always keeping a single topic as the master topic that I should focus on the most. For ex. right now, it is `Clojure` (and `Sceheme` languages).
+Generally, I deal with this syndrome by always keeping a single topic as the master topic that I should focus on the most. Then there should be 2-3 other items that I work on whenever I get a bit jaded with the main topic. For ex. right now, the main topic is `Clojure` (and `Sceheme` language, with some `emacs-lisp`). The sub-topics include [`Reactive Programming`][reactive_manifesto], `nodejs`, `ECMAScript 6` and `Scala`. This sub-topic list is constantly changing.
 
-The list of things that I want to learn is endless. I'll upload the rest of the post later...
+The list of things that I want to do or learn is endless. That's a good news, but the annoying part is that I can't do all of those at once; even though I try at times. Some of the long-standing items on the list include
+
+1. Mathemathics. Required for several things related to computer science. This issue blocks points 3 and 4.
+2. learning to write well.
+3. finishing the [MIT algorithms course][algorithms]
+4. Finish The *Art of Computer Programming* series of books.
+5. Finish [SICP][SICP].
+6. Learn about `AI`. Specifically, go through the [*Paradigms of Artifical Intelligence Programming*][paip] book.
+7. Start a blog
+8. ...
+
+I am making some progress with the blog writing thing. Now, I think I'll go and have a coffee and start looking at this cool looking `JavaScript` library called [`ReactJS`][ReactJS] from [facebook][facebook].
 
 [funny-link]: http://research.microsoft.com/en-us/people/mickens/thenightwatch.pdf
 [funniest-man]: http://blogs.msdn.com/b/oldnewthing/archive/2013/12/24/10484402.aspx
@@ -53,3 +64,9 @@ The list of things that I want to learn is endless. I'll upload the rest of the 
 [mapreduce]: http://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf
 [spark]: http://spark.apache.org/
 [emacs]: http://www.gnu.org/software/emacs/
+[reactive_manifesto]: http://www.reactivemanifesto.org/
+[algorithms]: http://archive.org/details/MIT6.046JF05MPEG4/
+[SICP]: http://mitpress.mit.edu/sicp/full-text/book/book.html
+[paip]: http://norvig.com/paip.html
+[ReactJS]: http://facebook.github.io/react/
+[facebook]: https://www.facebook.com/
