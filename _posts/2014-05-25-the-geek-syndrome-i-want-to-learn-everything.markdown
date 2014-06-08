@@ -2,7 +2,6 @@
 layout: post
 title:  Suffering from the geek syndrome.
 date:   2014-05-25 16:12:30
-categories: learning programming
 comments: true
 ---
 
