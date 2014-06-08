@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Breaking out of the callbak hell with ECMAScript 6 generators.
+title:  Better jQuery ajax with ECMAScript 6 generators.
 date:   2014-06-04
 categories: programming JavaScript
 comments: true
