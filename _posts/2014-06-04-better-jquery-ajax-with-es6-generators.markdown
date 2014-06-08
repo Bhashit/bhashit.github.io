@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Better jQuery ajax with ECMAScript 6 generators.
+title:  Eliminating ugliness in jQuery ajax with ECMAScript 6 generators.
 date:   2014-06-04
 comments: true
 ---
