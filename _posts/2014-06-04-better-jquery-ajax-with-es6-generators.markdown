@@ -97,7 +97,7 @@ for(let value of range) {
 
 ```
 
-Notice the `*` just before the function name. That's what makes this a generator function. When you call `rangeGenerator()`, it returns you the actual generator object that you can use to get to the generated values. Each call to `range.next()` returns a  JS object with two properties: `value` and `done`. The `value` is the actual value that is returned by the `yield` statement, and `done` is a boolean flag indicating whether the generator is done producing results. You can easily use this flag to get all the values from a generator using some form of a loop. Or, you can directly iterate over them using the new `for...of` loop, as can be seen in the example. You can do all kinds of cool stuff with generators. For ex. you can use them to create infinite sequences.
+Notice the `*` just before the function name. That's what makes this a generator function. When you call `rangeGenerator()`, it returns you the actual generator object that you can use to get to the generated values. When a `yield` statement is encountered, the result of evaluating the expression on the right-hand side of `yield` is returned and the execution context is suspended. Each call to `range.next()` returns a  JS object with two properties: `value` and `done`. The `value` is the actual value that is returned by the `yield` statement, and `done` is a boolean flag indicating whether the generator is done producing results. You can easily use this flag to get all the values from a generator using some form of a loop. Or, you can directly iterate over them using the new `for...of` loop, as can be seen in the example. You can do all kinds of cool stuff with generators. For ex. you can use them to create infinite sequences.
 
 ```javascript
 function *getInfiniteSeq() {
@@ -127,7 +127,7 @@ console.log(take(inifiniteSeq, 5));
 
 You can go even a step further and define operations like `map` to be lazy. Alright, so, as far as using generators with async operations is concerned, there are two important things to keep in mind about generator.
 
-1. You can inject values into a generator by passing an argument to the `next()` method call. If you do so, the value passed to the mwthod call would be the return value of the last `yield` statement that resulted in a value.
+1. You can inject values into a generator by passing an argument to the `next()` method call. If you do so, the value passed to the method call would be the return value of the last `yield` statement that resulted in a value.
 2. You can call `throw()` method on a generator. The exception object passed to the `throw` will be thrown from the current suspended context of the generator, as if the yield statement that is currently suspended were a `throw` statement.
 
 The following sample should probably explain it a bit more clearly.
@@ -177,7 +177,7 @@ function async(genertorFactory) {
 }
 ```
 
-So, how do we use this. Well, pretty simple. If you want to have two async calls executed one by one:
+So, how do we use this. Well, pretty simple. If you want to have multiple async calls executed one by one:
 
 ```javascript
 async(function *() {
@@ -190,7 +190,7 @@ async(function *() {
     var result2 = yield $.ajax("/request2");
     var result3 = yield $.ajax("/request3");
     // Do something with the results
-    console.log(result1, result2 result3);
+    console.log(result1, result2, result3);
   } catch(xhr) {
     console.log("Error: " + xhr);
   }
@@ -209,7 +209,7 @@ async(function *() {
     var resultPromise3 = $.ajax("/request3");
     // Do something with the results
     let results = {"1": yield resultPromise1, "2": yield resultPromise2, "3": yield resultPromise3}
-    console.log(result1, result1, result3);
+    console.log(results);
   } catch(xhr) {
     console.log("Error: " + xhr);
   }
@@ -218,7 +218,7 @@ async(function *() {
 
 Notice that all the ajax calls start in parallel. Notice especially the position of the `yield` keyword.
 
-Generators do promise to be a great feature. As more and more people become faimiliar with it, I think people will come up with even more usages for them.
+Generators do look like a great feature. As more developers become faimiliar with it, I think they will come up with even more usages for them.
 
 ## resources
 
