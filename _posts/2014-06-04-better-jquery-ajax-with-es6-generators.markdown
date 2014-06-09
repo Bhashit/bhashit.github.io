@@ -12,9 +12,9 @@ comments: true
 
 I have made some changes to deal with the general use-case of multiple [`jQuery`][jQuery] based ajax calls, but for the most part, this blog post is just a learning exercise for me.
 
-I like reading, and learning, a lot. I also recently quit my day job, where I was working overtime (by choice), doing not just my own work, but also helping almost everyone else out with their programming problems. This was fun as long as people came to me with hard problems that they couldn't solve; at least, not in a reasonable amount of time. I enjoyed that part so much that I almost never complained about being underpaid. As long as I could get my hands on some cool problems, money was not an issue.
+I like reading, and learning, a lot. I also recently quit my day job, where I was working overtime (by choice), doing not just my own work, but also helping almost everyone else out with their programming problems. This was fun as long as people came to me with hard problems that they couldn't solve; at least, not in a reasonable amount of time. I enjoyed that part so much that I almost never complained about being underpaid. As long as I could get my hands on some cool problems, money was not an issue. The bad part was that, since I was so accomodating, I was sometimes asked to solve problems that were just plain silly. That was a bit aggravating.
 
-The bad part was that, since I was so accomodating, people started coming to me with problems that were just plain silly. Even though I was working overtime by *choice*, I did miss a few things like long learning/programming sessions and leisure reading. Don't get me wrong. I learned a lot on the job. I did learn a lot by solving other people's problems. Sometimes those problems took up my weekends. But I was getting more and more busy. Having 2 days straight just for learning/programming was a luxury. I like learning things in detail. I like getting to know the internals of things. I had been thinking of quitting the job for quite some time, and then, the company moved to a new office; and they decided that open office plans were a great thing. They probably had never read [peopleware][peopleware]. I couldn't stand working with so much visual and auditory noise. So, I quit the job.
+Even though I was working overtime by *choice*, I did miss a few things like long learning/programming sessions and leisure reading. Don't get me wrong. I learned a lot on the job. I did learn a lot by solving other people's problems. Sometimes those problems took up my weekends. But I was getting more and more busy. Having 2 days straight just for learning/programming was a luxury. I like learning things in detail. I like getting to know the internals of things. I had been thinking of quitting the job for quite some time, and then, the company moved to a new office; and they decided that open office plans were a great thing. They probably had never read [peopleware][peopleware]. I couldn't stand working with so much visual and auditory noise. 1 month later, I resigned.
 
 So, you might be wondering what does this have to do with the `ECMAScript` generators. Well, nothing really. The thing is, after quitting the job, I have been doing some freelance work, which pays way more than my job and I still get more time to learn new things. So, I have been bingeing on all kinds of learning resources: books, articles, videos. That's how I got to [`ES 6`][es6]. I have been working with JavaScript for more than 5 years, from the days when I had to worry about `IE 6` compatibility. It has come a long way from those days.
 
@@ -28,7 +28,7 @@ In jQuery, now that we have [`deferred objects`][jQueryDeferred] and the so call
 ```javascript
 $.ajax("/request1").then(function(data1) {
   console.log("Request 1 done");
-	$.ajax("/request2").then(function(data2) {
+  $.ajax("/request2").then(function(data2) {
 	  console.log("Request 2 done");
   }, function() {
     // handle request 2 failure
@@ -54,7 +54,7 @@ $.when($.ajax("/request1"), $.ajax("/request2")).then(function(response1, respon
 
 ```
 
-Again, this is not very hellish; not pretty either. Things are made a bit easy by [`jQuery.when`][jQueryWhen]. However, this is still not very pretty. It's far from the normal flow of code that programmers are generally used to. We don't have `try-catch` and we handle the errors through callbacks. We might need one error handling callback for each asynchronous operation. You might still need additional error handling when dealing with the results of a successful asynchronous operations. For ex. trying to parse the response of a request could throw an exception and you might want to handle that. So, your error handling code would be divided into two parts: the error callbacks and the `try-catch` within the success callbacks.
+Again, this is not very hellish; not pretty either. Things are made a bit easy by [`jQuery.when`][jQueryWhen]. However, it's far from the normal flow of code that programmers are generally used to. We don't have `try-catch` and we handle the errors through callbacks. We might need one error handling callback for each asynchronous operation. You might still need additional error handling when dealing with the results of a successful asynchronous operations. For ex. trying to parse the response of a request could throw an exception and you might need a `try-catch` for that. So, your error handling code would be a huge mess of error-callbacks and possibly multiple `try-catch` blocks.
 
 ## Generators to the rescue
 
@@ -62,7 +62,7 @@ To some people, generators might seem like magical beings, especially all you kn
 
 > They have the capability to suspend their execution context and then later re-enter that execution context with variable bindings intact across the re-entrances.
 
-So, if you don't know the basics of generators already, here's a quick rundown of the basics:
+If you don't know the basics of generators already, here's a quick rundown of the basics:
 
 ```javascript
 function *rangeGenerator(lower, upper) {
