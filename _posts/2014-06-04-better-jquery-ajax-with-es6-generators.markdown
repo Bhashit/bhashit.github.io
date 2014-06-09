@@ -54,7 +54,7 @@ $.when($.ajax("/request1"), $.ajax("/request2")).then(function(response1, respon
 
 ```
 
-Again, this is not very hellish; not pretty either. Things are made a bit easy by [`jQuery.when`][jQueryWhen]. However, it's far from the normal flow of code that programmers are generally used to. We don't have `try-catch` and we handle the errors through callbacks. We might need one error handling callback for each asynchronous operation. You might still need additional error handling when dealing with the results of a successful asynchronous operations. For ex. trying to parse the response of a request could throw an exception and you might need a `try-catch` for that. So, your error handling code would be a huge mess of error-callbacks and possibly multiple `try-catch` blocks.
+Again, this is not very hellish; not pretty either. Things are made a bit easy by [`jQuery.when`][jQueryWhen]. However, it's far from the normal flow of code that programmers are generally used to. We don't have `try-catch` and we handle the errors through callbacks. We might need one error handling callback for each asynchronous operation. You might still need additional error handling when dealing with the results of successful asynchronous operations. For ex. trying to parse the response of a request could throw an exception and you might need a `try-catch` for that. So, your error handling code would be a huge mess of error-callbacks and possibly multiple `try-catch` blocks.
 
 ## Generators to the rescue
 
