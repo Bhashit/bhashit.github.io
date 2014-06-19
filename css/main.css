@@ -160,6 +160,11 @@ article img {
    page-break-inside: avoid;
 }
 
+article img.emoji {
+  display: inline;
+  border-radius: 0;
+}
+
 footer #date {
    float: right;
 }

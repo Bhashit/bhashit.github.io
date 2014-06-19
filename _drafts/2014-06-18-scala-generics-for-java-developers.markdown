@@ -11,7 +11,57 @@ Scala itself is not a very pretty language. I got to Scala after I learned Cloju
 
 For average Java developers, it wasn't easy to use Generics effectively. Most of the people only used them with Collections and that was that. I still know several people who would be dumbfounded if they ever had to write something involving bounded types. Well, this post is definitely not for them.
 
-After learning Scala for more than a year, I still cannot say that I am an expert. However, I'm writing more and more idiomatic Scala code, and I have even learned when to stay away from some [ugly parts][scala-implicits] of Scala. For now, I'm going to focus on Scala's generics. Scala has much more powerful Generics than Java. One thing that is not quite easy to put into words is the concept of cavariance and contravariance. That's what I'm going to talk about.
+After learning Scala for more than a year, I still cannot say that I am an expert. However, I'm writing more and more idiomatic Scala code, and I have even learned when to stay away from some [ugly parts][scala-implicits] of Scala. For now, I'm going to focus on Scala's generics. Scala has much more powerful Generics than Java. One thing that is not quite easy to put into words is the concept of cavariance and contravariance. That's what I'm going to attempt to do here.
+
+## Covariance
+
+The textbook definition goes something like this:
+
+> If a generic type's subtype relationship is the same as its type parameter T, that generic type is covariant.
+
+I know, I did't get it the first time either. Here's an example that could make this a bit more clear. In Java, you might be used to something like this:
+
+```java
+void foo(Iterator<? extends Number> numberIterator) { ... }
+```
+
+Here, we are saying that we can have an `Iterator` for a `Number` or any subclass thereof. We are declaring `Iterator` to be covariant with respect the class hierarchy of `Number`. The argument `numberIterator` is assignment compatible with an `Iterator` of any subclass of `Number`. That is, you can pass it an `Iterator<Integer>` or an `Iterator<Double>` and it would work. Since `Integer` is a subclass of `Number`, `Iterator<Integer>` is subclass of `Iterator<Number>`. In some other place, we might have a declaration like this:
+
+```java
+ public <T extends Object> void doIt(Iterator<T> numberIterator) { ... }
+```
+
+Here, we are declaring that `Iterator` is covariant with respect to the entire `Object` hierarchy. It can essentially iterate over any `Object`. What we are saying is that
+
+> If a type B is a subtype of A, for `Iterator` to be considered covariant, `Iterator<B>` should be assignable to `Iterator<A>`. In other words, `Iterator<B>`  can be treated as a subclass of `Iterator<A>`
+
+I know, some academics might be ready to kill me now :tired_face:. Reiterating that academic definition now should be fruitful. The generic type `Iterator`'s subtype relationship is in the same direction as its type parameters. That is, since `Integer` is a subtype of `Number`, `Iterator<Integer>` is a subtype of `Integer<Number>`. The types are varying in the same direction.
+
+### Covariance :point_right: producers
+
+Covariance is generally associated with constructs that produce or return values. The `Iterator[_ <: Number]` is a producer for numbers. If you think with that perspective, covariance makes even more sense. An `Iterator[Integer]` is going to produce `Integers`, and `Integers` are `Numbers`, so a producer of `Integer` is also a producer of `Numbers`. The covariance was also applied to method return types in java 5.
+
+```java
+
+class Producer {
+  Object getSomething(){ ... }
+}
+
+class IntegerProducer extends Producer {
+  @override
+  Integer getSomething() { ... }
+}
+```
+
+Since the method `getSomething` is supposed to return (produce) an `Object`, it should be okay to return an `Integer` from the overridden method. Since `Integer` *is* an `Object`, a method producing `Integer` is producing an `Object`. So, to reiterate:
+> covariance is associated with constructs that produce or return values.
+
+
+## contravariance
+
+Contravariance is much less intuitive than covariance. To again begin with a textbook-like definition:
+
+> If a generic type's subtype relationship is the reverse direction as that of its type parameter T, that generic type is contravariant.
 
 
 
