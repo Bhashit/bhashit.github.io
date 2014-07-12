@@ -134,7 +134,26 @@ Overlay layers generally have their source data in a format other than imagery. 
 
 ## Adding markers
 
+Adding markers to OpenLayers is not as straightforward as with Google or Bing maps. OpenLayer markers are a combination of [`OpenLayers.LonLat`][open_layer_lonlat] and [`OpenLayers.Icon`][open_layer_icon]. Markers are added to a special layer, which is an instance of [`OpenLayers.Layer.Markers`][open_layer_markers].
 
+```javascript
+var markersLayer = new OpenLayers.Layer.Markers( "Markers" );
+// The size of the icon
+var size = new OpenLayers.Size(21,25);
+// The amount of offset for the icon from its anchor point.
+var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
+var icon = new OpenLayers.Icon('http://www.openlayers.org/dev/img/marker.png', size, offset);
+
+var marker = new OpenLayers.Marker(center, icon);
+staticMarkersLayer.addMarker(new OpenLayers.Marker(center, icon));
+staticMarkersLayer.addMarker(new OpenLayers.Marker(LatLong(map, 48.857, 2.294), icon.clone()));
+```
+
+Note that while adding the second icon, we are cloning the icon instance instead of reusing it. This is required by the OpenLayers. According to the OpenLayers docs, icon instances should not be shared between markers.
+
+There are several things that you can do with markers, like setting the opacity of the layers and adding click events and so forth. The markers don't allow themselves to be dragged by default. The OpenLayers documentations doesn't have any details on draggable markers. If we want to make the markers draggable, we can create them ourselves using [`vectors`][vectors]. More on that later.
+
+## Adding Popups
 
 [map_projection]: https://en.wikipedia.org/wiki/Map_projection
 [google_maps_mercator]: https://groups.google.com/forum/#!msg/Google-Maps-API/gZytmchfZB4/5vYheY6xIoIJ
@@ -143,3 +162,7 @@ Overlay layers generally have their source data in a format other than imagery. 
 [open_layer_gmap_api]: http://dev.openlayers.org/releases/OpenLayers-2.13.1/doc/apidocs/files/OpenLayers/Layer/Google-js.html
 [open_layer_default_projection]: http://dev.openlayers.org/releases/OpenLayers-2.13.1/doc/apidocs/files/OpenLayers/Map-js.html#OpenLayers.Map.projection
 [open_layer_is_base_layer]: http://dev.openlayers.org/releases/OpenLayers-2.13.1/doc/apidocs/files/OpenLayers/Layer-js.html#OpenLayers.Layer.isBaseLayer
+[open_layer_lonlat]: http://dev.openlayers.org/apidocs/files/OpenLayers/BaseTypes/LonLat-js.html#OpenLayers.LonLat
+[open_layer_icon]: http://dev.openlayers.org/apidocs/files/OpenLayers/Icon-js.html#OpenLayers.Icon
+[open_layer_markers]: http://dev.openlayers.org/apidocs/files/OpenLayers/Layer/Markers-js.html#OpenLayers.Layer.Markers
+[open_layers_vectors]: http://dev.openlayers.org/apidocs/files/OpenLayers/Layer/Vector-js.html
