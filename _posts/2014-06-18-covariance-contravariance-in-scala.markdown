@@ -184,7 +184,7 @@ val set = Set(1, 2, 3)
 println(set(2)) // prints "true"
 ```
 
-However in that definition, the `(A => Boolean)` part is `Function1`. And `Function1` is contravariant in its argument type, remember? So, if a `Set` is a `Function1`, it is contravariant; and it can't be covariant and contravariant at the same time. We can't declare set to be contravariant as well, since that would create problems with covariant traits like `Iterable` that Set extends. So, there is a conflict with either kind of variance and it was decided to make Sets invariant. Scala people are learning to live with that mistake. See [this link][http://stackoverflow.com/questions/676615/why-is-scalas-immutable-set-not-covariant-in-its-type] for some interesting discussion.
+However in that definition, the `(A => Boolean)` part is `Function1`. And `Function1` is contravariant in its argument type, remember? So, if a `Set` is a `Function1`, it is contravariant; and it can't be covariant and contravariant at the same time. We can't declare set to be contravariant as well, since that would create problems with covariant traits like `Iterable` that Set extends. So, there is a conflict with either kind of variance and it was decided to make Sets invariant. Scala people are learning to live with that mistake. See [this link][so_discussion] for some interesting discussion.
 
 ### Scala compiler does get confused sometimes
 
@@ -194,7 +194,7 @@ With java, we are pretty much used to seeing this definition:
 static <T extends Comparable<? super T>> T max(Collection<? extends T> coll)
 ```
 
-Here, we are expecting a Collection of some type that implements Comparable either directly, or through one of its super-classes. Transalting this declaration directly into Scala doesn't work as of now (Scala version 2.11.0-M8)
+Here, we are expecting a Collection of some type that implements Comparable either directly, or through one of its super-classes. Translating this declaration directly into Scala doesn't work as of now (Scala version 2.11.0-M8)
 
 ```scala
 def max[T <: Comparable[_ >: T]](p: Iterable[T]) = ???
@@ -236,3 +236,4 @@ Of course, there are several more parts in that series. But these are the most e
 [eric_lipper_3]: http://blogs.msdn.com/b/ericlippert/archive/2007/10/19/covariance-and-contravariance-in-c-part-three-member-group-conversion-variance.aspx
 [eric_lipper_4]: http://blogs.msdn.com/b/ericlippert/archive/2007/10/22/covariance-and-contravariance-in-c-part-four-real-delegate-variance.aspx
 [eric_lipper_5]: http://blogs.msdn.com/b/ericlippert/archive/2007/10/24/covariance-and-contravariance-in-c-part-five-higher-order-functions-hurt-my-brain.aspx
+[so_discussion]: http://stackoverflow.com/questions/676615/why-is-scalas-immutable-set-not-covariant-in-its-type
