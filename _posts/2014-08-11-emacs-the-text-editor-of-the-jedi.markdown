@@ -1,6 +1,6 @@
 ---
 layout: post
-title: emacs: the text editor of the Jedi
+title: emacs- the text editor of the Jedi
 date:   2014-08-11
 comments: true
 ---
