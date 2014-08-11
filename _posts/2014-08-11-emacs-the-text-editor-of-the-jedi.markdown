@@ -91,11 +91,11 @@ IDEs are here to stay, no doubt about that. But real hackers are almost always l
 
 [elisp]: https://www.gnu.org/software/emacs/manual/eintr.html
 
-[apropos]: apropos "https://www.gnu.org/software/emacs/manual/html_node/emacs/Apropos.html"
+[apropos]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Apropos.html
 
 [eric-raymond-lisp]: http://www.catb.org/esr/faqs/hacker-howto.html
 
-[ensime]: would
+[ensime]: https://github.com/ensime/ensime-server
 
 [idris-lang]: http://www.idris-lang.org/
 
@@ -103,7 +103,7 @@ IDEs are here to stay, no doubt about that. But real hackers are almost always l
 
 [play-framework]: http://www.playframework.com/
 
-[LightTable]: Yup. [LightTable][]
+[LightTable]: http://www.lighttable.com/
 
 [ClojureScript]: http://clojure.org/clojurescript
 
