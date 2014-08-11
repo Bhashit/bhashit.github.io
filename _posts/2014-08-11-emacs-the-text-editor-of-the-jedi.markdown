@@ -13,7 +13,7 @@ Besides, I don't think I come even close to be considered a Jedi when it comes t
 
 Whenever I have tried to learn some new or non-mainstream programming language, like `scheme`, getting a decent text editor has always been a problem. Most of the time I have used [vim][vim]. And `vim` is a great editor by all accounts. I have been using it ever since I switched to Linux 7-8 years ago. However, I never got around to learning any advanced features. Neither did I ever learn `vimscript`. I tried learning `emacs` by following the built in tutorial twice in the past, but never got any further than that. Learning to wield one of these two editors well had been in my todo list for at least 3-4 years.
 
-Then it finally happened, the [`M-x butterfly`][emacs-xkcd]] was pressed somewhere and the forces of the nature combined to crash my [scala-ide][scala-ide] twice in the span of a few minutes, while I was working on an important side project. With eclipse, crashing is something that happens on almost daily basis with me. But this time, there were two things different:
+Then it finally happened, the [`M-x butterfly`][emacs-xkcd] was pressed somewhere and the forces of the nature combined to crash my [scala-ide][scala-ide] twice in the span of a few minutes, while I was working on an important side project. With eclipse, crashing is something that happens on almost daily basis with me. But this time, there were two things different:
 
 1. I had a few days on my hand.
 2. I was using a standalone `scala-ide` download for my work, so it wasn't installed as a plugin in eclipse.
@@ -58,16 +58,23 @@ Yup. [LightTable][LightTable] is something I have been using for 3-4 months for 
 
 However, the number of available plugins is still pretty low. The plugin development API is still not available, so extending it yourself is not an option right now. So, until it becomes extensible, I am sticking with `emacs`. Although, I am eagerly waiting for the time when that happens. `emacs` is great, but it's still very old, and sometime archaic. LightTable has all the right ingredients to become the "next emacs": It's written in `ClojureScript`, which is a dialect of lisp; It's open source; and the lead developer, [Chris Granger][chris-granger] seems to have exactly the right kind of attitude. I, for one, am going to keep a close eye on the progress of that text editor.
 
-## `emacs` is fun
+## emacs is fun
 
 `emacs` is fun because emacs is actually a bunch of lisp code that you can really debug. If your `emacs` init file is not loading corretly, you can actually debug it. While working in the editor, you can execute commands and change the behavior of the editor instantly. You can change key-bindings and you can do whatever crazy stuff that comes to your mind. Even when using IDEs, people try to customize every last bit of functionality through GUI. Hackers love to have their environment configured to the very last bit. And `emacs` takes this configurability to a whole new dimension. You actually write little pieces of code to configure it, and every single piece of wiring can be taken apart and reconnected somewhere else. Of course, you sometimes risk breaking something, but that's a huge part of the fun. Being able to do so is rewarding in the same sense that it is rewarding to use linux when using windows could make several things much easier.
 
-## `emacs` as your first editor
+## emacs as your first editor
 
 I read somewhere that beginner users shouldn't try to use "difficult" editors like `emacs`  when they are just starting out. This might have some truth in it. Nowadays, a newbie programmer is generally learning at least 4-5 different things at the same time. Entering any programming language eco-system can be intimidating at first, especially if you know how much there is to learn. _Learning_ to use an editor on top of that could just add more cognitive load. However, I think that using `emcas` instead of some IDE at the very beginning of your career can be extremely rewarding. To reduce the learning burden, they can just enable syntax highlighting and use it like a plain vanilla text editor. Once they get fairly confortable, they can start tinkering around with all the wiring. By the time they become professional hackers, they would be pretty good at it. Being comfortable with a lisp and its programming paradigm since the beginning of your career can be invaluable. Being proficient with `emacs` automatically translates into having at least a decent development environment for any language you choose. And that is a benefit worth having becasue learning new languages is an essential part of becoming a good hacker. After spending just a week with `emacs`[^2], I, for one, would have been really grateful if somebody had given me this advice when I started learning programming.
 
 
 IDEs are here to stay, no doubt about that. But real hackers are almost always learning new things, especially programming languages, and if you are one of them, it will pay to learn to use at least one great text editor really well. I am not saying that go with `emacs`. You can choose `vim`. I have never seen an expert `vim` or `emacs` user working but I have heard that they can do pretty incredible things.  I cannot say much about `vim` even though it has been a constant companion. But if you do learn `emacs`, it would definitely be time well spent.
+
+## Footnotes
+
+[^1]: I know, eclipse, and almost all the other development tools are free, and nobody has a right to complain about the free things they get. I am not trying to be ungrateful to the developers of these great tools at all. I am extremely grateful, actually. But, even with free tools, I think people can still get frustrated.
+
+[^2]: Although, the week I spent with emacs was not a normal 9-to-5, 5 days a week kind of week. It was a hacker week, in which I spent almost all my waking hours digging on the internet and experimenting.
+
 
 [vim]: http://www.vim.org/ "vim"
 
@@ -109,8 +116,3 @@ IDEs are here to stay, no doubt about that. But real hackers are almost always l
 
 [chris-granger]: http://www.chris-granger.com/
 
-
-
-[^1]: I know, eclipse, and almost all the other development tools are free, and nobody has a right to complain about the free things they get. I am not trying to be ungrateful to the developers of these great tools at all. I am extremely grateful, actually. But, even with free tools, I think people can still get frustrated.
-
-[^2]: Although, the week I spent with emacs was not a normal 9-to-5, 5 days a week kind of week. It was a hacker week, in which I spent almost all my waking hours digging on the internet and experimenting.
