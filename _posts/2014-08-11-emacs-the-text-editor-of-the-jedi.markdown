@@ -1,6 +1,6 @@
 ---
 layout: post
-title: emacs- the text editor of the Jedi
+title: Emacs - the text editor of the Jedi
 date:   2014-08-11
 comments: true
 ---
@@ -26,7 +26,7 @@ It might be, byt there are several reasons I never switched to IntelliJ.
 
 1. Eclipse was used at my previous job
 2. [Spring Tool Suite][SpringToolSuite] is built on top of pse. It's also developed by the same people who develop the [Spring Framework][SpringFramework].
-3. [`scala-ide`][scala-ide] is developed by [TypeSafe][type-safe]], whose founder is Martin Odersky; the man who created Scala.
+3. [`scala-ide`][scala-ide] is developed by [TypeSafe][type-safe], whose founder is Martin Odersky; the man who created Scala.
 4. When I started developing in `clojure`, [counteclockwise][counterclockwise] was overall the best choice, and it's an eclipse plugin. This plugin was also endorsed by the authors of one of [the best books on clojure][clojure-prog].
 5. The official clojure plugin for IntelliJ is only available with the paid version.
 6. Choosing IntelliJ, or any other popular IDE/editor,  doesn't solve the problem of working with non-mainstream languages.

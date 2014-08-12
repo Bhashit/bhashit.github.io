@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  declaration site covariance and contravariance in Scala for dummies (Java Developers)
+title:  Declaration site covariance and contravariance in Scala for dummies (Java Developers)
 date:   2014-06-18
 comments: true
 ---
