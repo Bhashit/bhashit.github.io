@@ -25,7 +25,8 @@ So, you might be wondering what does this have to do with the `ECMAScript` gener
 ## The control flow in asynchronous coding
 In jQuery, now that we have [`deferred objects`][jQueryDeferred] and the so called [`promises`][jQueryPromise], this is how I could nest my ajax calls:
 
-```javascript
+{% highlight javascript  %}
+
 $.ajax("/request1").then(function(data1) {
   console.log("Request 1 done");
   $.ajax("/request2").then(function(data2) {
@@ -37,11 +38,12 @@ $.ajax("/request1").then(function(data1) {
   // handle request 1 failure
 });
 
-```
+{% endhighlight %}
 
 Okay, this is not yet very ugly. However, add one more nested ajax call, and you enter the proverbial [callback hell][callbackHell]. Instead of nesting, if you want to execute those ajax calls in parallel, you could do something like this:
 
-```javascript
+{% highlight javascript  %}
+
 $.when($.ajax("/request1"), $.ajax("/request2")).then(function(response1, response2) {
   // Each argument is an array with the following structure:
   // [data, statusText, jqXHR]
@@ -52,7 +54,7 @@ $.when($.ajax("/request1"), $.ajax("/request2")).then(function(response1, respon
   // necessary cleanup.
 })
 
-```
+{% endhighlight %}
 
 Again, this is not very hellish; not pretty either. Things are made a bit easy by [`jQuery.when`][jQueryWhen]. However, it's far from the normal flow of code that programmers are generally used to. We don't have `try-catch` and we handle the errors through callbacks. We might need one error handling callback for each asynchronous operation. You might still need additional error handling when dealing with the results of successful asynchronous operations. For ex. trying to parse the response of a request could throw an exception and you might need a `try-catch` for that. So, your error handling code would be a huge mess of error-callbacks and possibly multiple `try-catch` blocks.
 
@@ -64,7 +66,7 @@ To some people, generators might seem like magical beings, especially all you kn
 
 If you don't know the basics of generators already, here's a quick rundown of the basics:
 
-```javascript
+{% highlight javascript %}
 function *rangeGenerator(lower, upper) {
   var result= lower;
   while(result <= upper) {
@@ -93,12 +95,11 @@ for(let value of range) {
 // => {value: 3, done: false}
 // => {value: undefined, done: true}
 
-
-```
+{% endhighlight %}
 
 Notice the `*` just before the function name. That's what makes this a generator function. When you call `rangeGenerator()`, it returns you the actual generator object that you can use to get to the generated values. When a `yield` statement is encountered, the result of evaluating the expression on the right-hand side of `yield` is returned and the execution context is suspended. Each call to `range.next()` returns a  JS object with two properties: `value` and `done`. The `value` is the actual value that is returned by the `yield` statement, and `done` is a boolean flag indicating whether the generator is done producing results. You can easily use this flag to get all the values from a generator using some form of a loop. Or, you can directly iterate over them using the new `for...of` loop, as can be seen in the example. You can do all kinds of cool stuff with generators. For ex. you can use them to create infinite sequences.
 
-```javascript
+{% highlight javascript %}
 function *getInfiniteSeq() {
   var i = 0 ;
   while(true) {
@@ -122,7 +123,7 @@ console.log(take(inifiniteSeq, 7));
 console.log(take(inifiniteSeq, 5));
 // => [7, 8, 9, 10, 11]
 
-```
+{% endhighlight %}
 
 You can go even a step further and define operations like `map` to be lazy. Alright, so, as far as using generators with async operations is concerned, there are two important things to keep in mind about generator.
 
@@ -131,7 +132,7 @@ You can go even a step further and define operations like `map` to be lazy. Alri
 
 The following sample should probably explain it a bit more clearly.
 
-```javascript
+{% highlight javascript %}
 function *generatorFunc() {
   var injectedVal = yield 1;
   console.log(injectedVal == 0);
@@ -148,11 +149,11 @@ console.log(generator.next());
 generator.throw("Some Error");
 // "Some Error"
 
-```
+{% endhighlight %}
 
 Keeping these two things in mind, a generic utility method could be created that would allow us to handle the jQuery ajax code in a much more natural, and easy to manage manner. We would make use of the `async` function defined below. This function is inspired by the contents of the two videos mentioned at the beginning of this post. Of course, I have made a few changes, and corrected a mistake.
 
-```javascript
+{% highlight javascript %}
 function async(genertorFactory) {
   var generator = genertorFactory.apply(this, arguments);
   var handleResult = function(result) {
@@ -174,11 +175,11 @@ function async(genertorFactory) {
   };
   return handleResult(generator.next());
 }
-```
+{% endhighlight %}
 
 So, how do we use this. Well, pretty simple. If you want to have multiple async calls executed one by one:
 
-```javascript
+{% highlight javascript %}
 async(function *() {
   try {
     // With jQuery, the XHR objects returned by the $.ajax method calls are
@@ -194,13 +195,13 @@ async(function *() {
     console.log("Error: " + xhr);
   }
 });
-```
+{% endhighlight %}
 
 This is much more readable then any callback based mechanism we might come up with. It also has the advantage that the errors can be handled in a more natural way. No multiple `try-catch` blocks, no error-callbacks. Just a straightforward `try-catch`.
 
 If we want to execute these calls in parallel, we can do that as well.
 
-```javascript
+{% highlight javascript %}
 async(function *() {
   try {
     var resultPromise1 = $.ajax("/request1");
@@ -213,7 +214,7 @@ async(function *() {
     console.log("Error: " + xhr);
   }
 });
-```
+{% endhighlight %}
 
 Notice that all the ajax calls start in parallel. Notice especially the position of the `yield` keyword.
 
