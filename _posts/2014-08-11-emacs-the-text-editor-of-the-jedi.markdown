@@ -48,7 +48,7 @@ So, yes, lisp was the primary reason I chose `emacs`. That and the feeling that 
 I think there are several other points which affected this decision. Not the least of which was the fact that I am a hero worshipper. Like some kid who buys Nike because his favorite sport star endorses it, I am inclined towards `emacs` because several hakers I admire, use it. Another was the fact that emacs has facilities for everything. The famous `emacs` joke describes it as an "operating system with a text-editor built in" or some variation thereof. I like the fact that I can use a terminal emulator directly from emacs, and I can commit to my git repo with a few keystrokes, or I can edit remote files (I havent tried that yet), without leaving the editor. The list of things you can do from the editor are endless. It's pretty common for experienced (smug and grey-bearded, with optional pony tail) `emacs` users to discover some surprising functionality that they have never used in the past.
 
 
-## FAQ: Should I switch all my development work to `emacs`
+## FAQ: Should I switch all my development work to emacs
 
 I don't think so. Especially not if your primary development langauge is a mainstream language like java or C#. For these languages, the IDEs are pretty much irreplacable. Even if you try to match the functionality of eclipse or IntelliJ for java development in `emcas`, you will be severely disappointed. Of course, there is nothing that you cannot do in `emacs`. Everything is possible, but the fact is that building all of the features of those IDEs is an extremely difficult task. And it's very time consuming. If an existing IDE for your developement langauge is not mature or stable enough, by all means, go to, `emacs`. But switching to `emacs` for enterprise java development could be a pretty bad idea. I am switching to `emacs` for scala since `emacs` has become a pretty much an IDE for `scala` with [ensime][ensime]. However, my primary purpose in learning `emacs` is to have a great editor for non-mainstream languages like [`idris-lang`][idris-lang] or [`Go`][go-lang]. For `scala`, I might still go back to `scala-ide` later, once it becomes stable enough. Meanwhile, I am thinking of building an `emacs` extension to support [`play-framework`][play-framework].
 
@@ -56,18 +56,35 @@ I don't think so. Especially not if your primary development langauge is a mains
 
 Yup. [LightTable][LightTable] is something I have been using for 3-4 months for `clojure` development; and it's pretty awesome to say the least. You have to see it to believe it. I mean, really, just take a look at the introduction video on [that site][LightTable], you _will_ be impressed.  Not to mention that fact that it's open-source and it can be tinkered around by writing [`ClojureScript`][ClojureScript]. And I like Clojure.
 
-However, the number of available plugins is still pretty low. The plugin development API is still not available, so extending it yourself is not an option right now. So, until it becomes extensible, I am sticking with `emacs`. Although, I am eagerly waiting for the time when that happens. `emacs` is great, but it's still very old, and sometime archaic. LightTable has all the right ingredients to become the "next emacs": It's written in `ClojureScript`, which is a dialect of lisp; It's open source; and the lead developer, [Chris Granger][chris-granger] seems to have exactly the right kind of attitude. I, for one, am going to keep a close eye on the progress of that text editor.
+However, the number of available plugins is still pretty low. While I am writing this, the plugin development API is still not available, so extending it yourself is not an option right now. So, until it becomes extensible, I am sticking with `emacs`. Although, I am eagerly waiting for the time when that happens. `emacs` is great, but it's still very old, and sometime archaic. LightTable has all the right ingredients to become the "next emacs": It's written in `ClojureScript`, which is a dialect of lisp; It's open source; and the lead developer, [Chris Granger][chris-granger] seems to have exactly the right kind of attitude. I, for one, am going to keep a close eye on the progress of that text editor.
 
 ## emacs is fun
 
-`emacs` is fun because emacs is actually a bunch of lisp code that you can really debug. If your `emacs` init file is not loading corretly, you can actually debug it. While working in the editor, you can execute commands and change the behavior of the editor instantly. You can change key-bindings and you can do whatever crazy stuff that comes to your mind. Even when using IDEs, people try to customize every last bit of functionality through GUI. Hackers love to have their environment configured to the very last bit. And `emacs` takes this configurability to a whole new dimension. You actually write little pieces of code to configure it, and every single piece of wiring can be taken apart and reconnected somewhere else. Of course, you sometimes risk breaking something, but that's a huge part of the fun. Being able to do so is rewarding in the same sense that it is rewarding to use linux when using windows could make several things much easier.
+`emacs` is fun because emacs is actually a bunch of lisp code that you can really debug. If your `emacs` init file is not loading corretly, you can actually debug it. While working in the editor, you can execute commands and change the behavior of the editor instantly. You can change key-bindings and you can do whatever crazy stuff that comes to your mind. It's like [LEGO][lego] for hackers.
+
+Even when using IDEs, people try to customize every last bit of functionality through GUI. Hackers love to have their environment configured to the very last bit.  Emacs takes this configurability to a whole new dimension. You write little pieces of code to configure it, and every single piece of wiring can be taken apart and reconnected somewhere else. Of course, you sometimes risk breaking something, but that's a huge part of the fun. Being able to do so is rewarding in the same sense that it is rewarding to use linux when using windows could make several things much easier.
+
 
 ## emacs as your first editor
 
-I read somewhere that beginner users shouldn't try to use "difficult" editors like `emacs`  when they are just starting out. This might have some truth in it. Nowadays, a newbie programmer is generally learning at least 4-5 different things at the same time. Entering any programming language eco-system can be intimidating at first, especially if you know how much there is to learn. _Learning_ to use an editor on top of that could just add more cognitive load. However, I think that using `emcas` instead of some IDE at the very beginning of your career can be extremely rewarding. To reduce the learning burden, they can just enable syntax highlighting and use it like a plain vanilla text editor. Once they get fairly confortable, they can start tinkering around with all the wiring. By the time they become professional hackers, they would be pretty good at it. Being comfortable with a lisp and its programming paradigm since the beginning of your career can be invaluable. Being proficient with `emacs` automatically translates into having at least a decent development environment for any language you choose. And that is a benefit worth having becasue learning new languages is an essential part of becoming a good hacker. After spending just a week with `emacs`[^2], I, for one, would have been really grateful if somebody had given me this advice when I started learning programming.
+I read somewhere that beginner users shouldn't try to use "difficult" editors like `emacs`  when they are just starting out. This might have some truth in it. Nowadays, a newbie programmer is generally learning at least 4-5 different things at the same time. Entering any programming language eco-system can be intimidating at first, especially if you know how much there is to learn. _Learning_ to use an editor on top of that could just add more cognitive load.
+
+However, I think that using `emcas` instead of some IDE at the very beginning of your career can be extremely rewarding. To reduce the learning burden, they can use it like a plain vanilla text editor with some syntax highlighting. Once they get confortable, they can start tinkering around with all the wiring. By the time they become professional hackers, they would be pretty good at it. Being comfortable with a lisp and its programming paradigm since the beginning of your career can be invaluable. Being proficient with `emacs` automatically translates into having at least a decent development environment for almost any language you choose. And that is a benefit worth having becasue learning new languages is essential to becoming a good hacker. After spending just a week with `emacs`[^2], I am convinced that I would have been really grateful if somebody had given me this advice when I started learning programming.
 
 
-IDEs are here to stay, no doubt about that. But real hackers are almost always learning new things, especially programming languages, and if you are one of them, it will pay to learn to use at least one great text editor really well. I am not saying that go with `emacs`. You can choose `vim`. I have never seen an expert `vim` or `emacs` user working but I have heard that they can do pretty incredible things.  I cannot say much about `vim` even though it has been a constant companion. But if you do learn `emacs`, it would definitely be time well spent.
+IDEs are here to stay, no doubt about that. But real hackers are always learning new things, especially programming languages, and if you are one of them, it will pay to learn to use at least one great text editor really well. I am not saying that go with `emacs`. You can choose `vim`. I have never seen an expert `vim` or `emacs` user working but I have heard that they can do incredible things. I cannot say much about `vim`, even though it has been a constant companion. But if you do learn `emacs`, it would definitely be time well spent [^3].
+
+## Resources
+
+- My own emacs config resides on [this github repo][emacs-github]. It's fairly well documented. It's a good idea to keep your emacs config in a repo, since it's piece of code, and you'll regret it if you lose it [^4]
+- [Prelude][prelude] is an emacs distribution that makes it easy to get started with emacs. I am not using it, but exploring their config helped me setup some good defaults. Plus, my required-package installation code was inspired by them.
+- [Emacs Starter Kit][emacs-starter-kit] is an emacs plugin that provides better defaults than the OOTB emacs. Again, I am not using it, but exploring their code is a good learning experience.
+- [Emacs Documentation][emacs-docs] is amazaingly complete.
+- [The Little Schemer][little-schemer] is a good book for basic introduction to the Scheme programming language (which is a dialect of lisp).
+- [ergoemacs.org][ergoemacs] has really good introductory material on emacs, as well as several advanced tutorials.
+- [masteringemacs.org][matering-emacs] is another resource I found very useful.
+
+Of course, googling will turn up several emacs resources.
 
 ## Footnotes
 
@@ -75,6 +92,26 @@ IDEs are here to stay, no doubt about that. But real hackers are almost always l
 
 [^2]: Although, the week I spent with emacs was not a normal 9-to-5, 5 days a week kind of week. It was a hacker week, in which I spent almost all my waking hours digging on the internet and experimenting.
 
+[^3]: Of course, you will have some WTF moments when you start using it. Like: WTF, who was the asshole who created these copy-paste shortcuts! Don't give up. I think this is the primary reason there aren't more emacs users out there. I gave up on emacs twice in the past for that reason. This time, I marched on and the WTF phase didn't last longer than two days.
+
+[^4]: There is a  [famous story][oreilly-vim] about Tim O'Reilly switching to vim when he lost he emacs config file. The situation is not that bad now. Out of the box, Emacs is still pretty usable. It now has a GUI for configuration and package installation as well.
+
+
+[emacs-github]: [^3]: https://github.com/Bhashit/emacs-config "Bhashit's emacs config github repo"
+
+[prelude]: https://github.com/bbatsov/prelude
+
+[emacs-starter-kit]: https://github.com/technomancy/emacs-starter-kit
+
+[emacs-docs]: http://www.gnu.org/software/emacs/#Manuals
+
+[little-schemer]: http://www.amazon.com/Little-Schemer-Daniel-P-Friedman/dp/0262560992/ref=sr_1_1?s=books&ie=UTF8&qid=1407818275&sr=1-1&keywords=the+little+schemer
+
+[ergoemacs]: http://ergoemacs.org/emacs/emacs.html
+
+[matering-emacs]: http://www.masteringemacs.org/
+
+[lego]: www.lego.com/
 
 [vim]: http://www.vim.org/ "vim"
 
@@ -116,3 +153,4 @@ IDEs are here to stay, no doubt about that. But real hackers are almost always l
 
 [chris-granger]: http://www.chris-granger.com/
 
+[oreilly-vim]: http://www.oreillynet.com/pub/a/oreilly/ask_tim/1999/unix_editor.html
