@@ -1,12 +1,19 @@
 name: Bhashit Parikh's blog
 description: Bhashit Parikh's blog. Programming, Learning, Books and Ranting.
-url: http://bhashit.github.io
-markdown: redcarpet
-pygments: true
+url: http://bhashitparikh.com
+
+markdown:  kramdown
+highlighter: pygments
 
 gems:
 - jemoji
 
+kramdown:
+  input: GFM
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  use_coderay: false
 
-redcarpet:
-  extensions: [smart]
