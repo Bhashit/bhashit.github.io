@@ -93,12 +93,14 @@ code, pre {
 }
 
 code {
-   padding: 2px 4px;
    font-size: 90%;
-   color: #c7254e;
-   background-color: #f9f2f4;
-   border-radius: 4px;
+   background: none repeat scroll 0% 0% #F5F5F5;
+   border: 1px solid #CCC;
+   border-radius: 2px;
+   padding: 1px 3px;
 }
+
+
 
 pre {
    display: block;
@@ -116,6 +118,7 @@ pre code {
    font-size: 90%;
    color: inherit;
    background-color: transparent;
+   border: none;
 }
 
 .highlight {
