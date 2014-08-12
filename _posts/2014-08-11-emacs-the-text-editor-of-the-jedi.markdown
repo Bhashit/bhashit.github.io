@@ -25,7 +25,7 @@ Let me explain why the second point is important. The side project I was working
 It might be, byt there are several reasons I never switched to IntelliJ.
 
 1. Eclipse was used at my previous job
-2. [Spring Tool Suite][SpringToolSuite] is built on top of pse. It's also developed by the same people who develop the [Spring Framework][SpringFramework].
+2. [Spring Tool Suite][SpringToolSuite] is built on top of eclipse. It's also developed by the same people who develop the [Spring Framework][SpringFramework].
 3. [`scala-ide`][scala-ide] is developed by [TypeSafe][type-safe], whose founder is Martin Odersky; the man who created Scala.
 4. When I started developing in `clojure`, [counteclockwise][counterclockwise] was overall the best choice, and it's an eclipse plugin. This plugin was also endorsed by the authors of one of [the best books on clojure][clojure-prog].
 5. The official clojure plugin for IntelliJ is only available with the paid version.
@@ -39,11 +39,11 @@ In one word: [`elisp`][elisp], or [`emacs-lisp`][elisp]. I have learned three di
 
 I could easily find out about all the internal wiring using the incredible help commands that `emacs` has built in (`M-h ?`). There are also [apropos][apropos] commands that allows easy searching. Writing `elisp` and immediately seeing the changes in `emacs`' behavior is incredibly satisfying. `vim` users, please don't get your panties in a bunch, it's an accepted fact that extending `emacs` is much easier than extending `vim`. I have done my research.
 
-Someone might argue that I chose emacs because I knew lisp already. Well, that just might be the case. But, even if you don't already know some dialect of lisp, I think picking up one is very easy. The syntax is pretty minimal. Although, writing idiomatic code could take some time, especially if you are coming from the java (or C#, or any other imperative language) world, like me. But that shouldn't deter you. Learning lisp, and especially lokking at some experienced lisper's code, is an enlightening experience in itself. As Eric Raymond put it in his [very famous essay][eric-raymond-lisp],
+Someone might argue that I chose emacs because I knew lisp already. Well, that just might be the case. But, even if you don't already know some dialect of lisp, I think picking up one is very easy. The syntax is pretty minimal. Although, writing idiomatic code could take some time, especially if you are coming from the java (or C#, or any other imperative language) world, like me. But that shouldn't deter you. Learning lisp, and especially looking at some experienced lisper's code, is an enlightening experience in itself. As Eric Raymond put it in his [very famous essay][eric-raymond-lisp],
 
 > LISP is worth learning for a different reason — the profound enlightenment experience you will have when you finally get it. That experience will make you a better programmer for the rest of your days, even if you never actually use LISP itself a lot.
 
-So, yes, lisp was the primary reason I chose `emacs`. That and the feeling that `emacs` was built for extending. With this choice, I hit two targets: I get to use an extensible text editor, and I get to use lisp.
+So, yes, lisp was the primary reason I chose `emacs`. That and the feeling that `emacs` was built for extending. With this choice, I hit two birds: I get to use a really malleable text editor; and I get to use lisp.
 
 I think there are several other points which affected this decision. Not the least of which was the fact that I am a hero worshipper. Like some kid who buys Nike because his favorite sport star endorses it, I am inclined towards `emacs` because several hakers I admire, use it. Another was the fact that emacs has facilities for everything. The famous `emacs` joke describes it as an "operating system with a text-editor built in" or some variation thereof. I like the fact that I can use a terminal emulator directly from emacs, and I can commit to my git repo with a few keystrokes, or I can edit remote files (I havent tried that yet), without leaving the editor. The list of things you can do from the editor are endless. It's pretty common for experienced (smug and grey-bearded, with optional pony tail) `emacs` users to discover some surprising functionality that they have never used in the past.
 
