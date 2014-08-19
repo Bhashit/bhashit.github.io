@@ -98,7 +98,7 @@ Of course, googling will turn up several emacs resources.
 
 [^3]: Of course, you will have some WTF moments when you start using it. Like: WTF, who was the ass-hole who created these copy-paste short-cuts! Don't give up. I think this is the primary reason there aren't more emacs users out there. I gave up on emacs twice in the past for that reason. This time, I marched on and the WTF phase didn't last longer than two days.
 
-[^4]: There is a  [famous story][oreilly-vim] about Tim O'Reilly switching to vim when he lost he emacs config file. The situation is not that bad now. Out of the box, Emacs is still pretty usable. It now has a GUI for configuration and package installation as well.
+[^4]: There is a  [famous story][oreilly-vim] about Tim O'Reilly switching to vim when he lost his emacs config file. The situation is not that bad now. Out of the box, Emacs is still pretty usable. It now has a GUI for configuration and package installation as well.
 
 
 [emacs-github]: [^3]: https://github.com/Bhashit/emacs-config "Bhashit's emacs config github repo"
