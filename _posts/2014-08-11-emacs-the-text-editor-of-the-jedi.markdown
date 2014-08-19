@@ -43,12 +43,12 @@ Someone might argue that I chose emacs because I knew lisp already. Well, that j
 
 > LISP is worth learning for a different reason — the profound enlightenment experience you will have when you finally get it. That experience will make you a better programmer for the rest of your days, even if you never actually use LISP itself a lot.
 
-So, yes, lisp was the primary reason I chose emacs. That and the feeling that emacs was built for extending. With this choice, I hit two birds: I get to use a really malleable text editor; and I get to use lisp.
+So, yes, lisp was the primary reason I chose emacs. That and the feeling that emacs was built for extending. I get to use a really malleable text editor _and_ I get to use Lisp.
 
 I think there are several other points which affected this decision. Not the least of which was the fact that I am a hero worshipper. Like some kid who buys Nike because his favorite sport star endorses it, I am inclined towards emacs because several hackers I admire, use it. Another was the fact that emacs has facilities for everything. The famous emacs joke describes it as an "operating system with a text-editor built in" or some variation thereof. I like the fact that I can use a terminal emulator directly from emacs, and I can commit to my git repo with a few keystrokes, or I can edit remote files (I haven’t tried that yet), without leaving the editor. The list of things you can do from the editor are endless. It's pretty common for experienced (smug and grey-bearded, with an optional pony tail) emacs users to discover some surprising functionality that they have never used in the past.
 
 
-## FAQ: Should I switch all my development work to emacs
+## FAQ: Should I switch all my development work to emacs?
 
 I don't think so. Especially not if your primary development language is a mainstream language like java or C#. For these languages, the IDEs are pretty much irreplaceable. Even if you try to match the functionality of eclipse or IntelliJ for java development in emcas, you will be severely disappointed. Of course, there is nothing that you cannot do in emacs. Everything is possible, but the fact is that building all of the features of those IDEs is an extremely difficult task. And it's very time consuming.
 
@@ -58,7 +58,9 @@ If an existing IDE for your development language is not mature or stable enough,
 
 Yup. [LightTable][LightTable] is something I have been using for 3-4 months for `clojure` development; and it's pretty awesome to say the least. You have to see it to believe it. I mean, really, just take a look at the introduction video on [that site][LightTable], you _will_ be impressed.  Not to mention that fact that it's open-source and it can be tinkered around by writing [`ClojureScript`][ClojureScript]. And I like Clojure.
 
-However, the number of available plugins is still pretty low. While I am writing this, the plugin development API is still not available, so extending it yourself is not an option right now. So, until it becomes extensible, I am sticking with emacs. Although, I am eagerly waiting for the time when that happens. emacs is great, but it's still very old, and sometime archaic. LightTable has all the right ingredients to become the "next emacs": It's written in `ClojureScript`, which is a dialect of lisp; It's open source; and the lead developer, [Chris Granger][chris-granger] seems to have exactly the right kind of attitude. I, for one, am going to keep a close eye on the progress of that text editor.
+However, the number of available plugins is still pretty low. If a new, interesting langauge arrives, emacs is more likely to have a plugin for it than LightTable. I know, I _can_ write the plugin myself, and that's a great idea.  But, before I do something about it, I need to take care of a few things at the top of my todo list. So, I am sticking with emacs for the time being. Although, LightTable has all the right ingredients to become the _next emacs_: It's written in `ClojureScript`, which is a dialect of lisp; It's open source; and the lead developer, [Chris Granger][chris-granger] seems to have exactly the right kind of attitude.
+
+Another difference between emacs and LightTable, and one that could also have a played a role in my selection of emacs, was the fact that emacs feels very unpolished, with lots of wires visible all around; making it look like exactly the right kind of tool for hacking around with new languages.
 
 ## emacs is fun
 
