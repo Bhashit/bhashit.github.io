@@ -13,7 +13,7 @@ Besides, I don't think I come even close to be considered a Jedi when it comes t
 
 Whenever I have tried to learn some new or non-mainstream programming language, like `scheme`, getting a decent text editor has always been a problem. Most of the time I have used [vim][vim]. And vim is a great editor by all accounts. I have been using it ever since I switched to Linux 7-8 years ago. However, I never got around to learning any advanced features or `vimscript`. I tried learning emacs by following the built in tutorial twice in the past, but never went any further. Learning to use one of these two editors well had been in my todo list for at least 3-4 years.
 
-Then it finally happened, the <kbd>[M-x butterfly][emacs-xkcd]</kbd> was pressed somewhere and the forces of the nature combined to crash my [scala-ide][scala-ide] twice in the span of a few minutes, while I was working on an important side project. With eclipse, crashing is something that happens on almost daily basis with me. But this time, there were two things different:
+Then it finally happened, the [`M-x butterfly`][emacs-xkcd] was pressed somewhere and the forces of the nature combined to crash my [scala-ide][scala-ide] twice in the span of a few minutes, while I was working on an important side project. With eclipse, crashing is something that happens on almost daily basis with me. But this time, there were two things different:
 
 1. I had a few days on my hand.
 2. I was using a standalone `scala-ide` download for my work, so it wasn't installed as a plugin in eclipse.
