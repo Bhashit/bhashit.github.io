@@ -25,20 +25,18 @@ If you use [`AccessType.FIELD`][accesstype-field] for non-option types, hibernat
 
 The easiest thing to do is using [`AccessType.PROPERTY`][accesstype-property] to do the following:
 
-{% highlight scala  %}
+{% highlight scala %}
 
 @Entity
 class User extends PersistentEntity {
-  // ...
-
+  ...
   @org.hibernate.annotations.Type(`type` = "string")
   @Access(AccessType.PROPERTY)
   var website: Option[String] = None
   
   private def getWebsite = website.getOrElse(null)
   private def setWebsite(e: String) = website = Option(e)
-  
-  // ...
+  ...
 }  
 
 {% endhighlight %}
@@ -49,33 +47,29 @@ You end up having to write getter/setter pairs for each property that uses the `
 
 Another, similar approach is:
 
-{% highlight scala  %}
-
-@Entity
-class User extends PersistentEntity {
-  // ...
+{% highlight scala %}
 
 @Entity
 @Access(AccessType.FIELD)
 class User extends PersistentEntity {
-  // ...
-
+  ...
   private var _website: String = _
   
   def website = Option(_website)
   def website_=(e: Option[String]) = _website = e.getOrElse(null)
-
-  // ...
-}  
+  ...
+}
 
 {% endhighlight %}
 
 Things are looking a little better now. This is a bit more scala-like. You use field-access and have a private field that hibernate can deal with. Use your own methods to wrap/unwrap `Option`. If you don't like the generated column names, override the default [`NamingStrategy`][naming-strategy].  This is much less verbose than the previous method.
 
 
-### A little less tedium with UserTypes
+### UserTypes can be helpful
 
-{% highlight scala linenos %}
+
+
+{% highlight scala %}
 
 package persistence.usertypes
 
@@ -128,10 +122,7 @@ abstract class AbstractOptionType[T](theClass: Class[T]) extends UserType {
   override def sqlTypes = Array(standardBasicType.sqlType)
 }
 
-
 {% endhighlight %}
-
-
 
 
 ## Footnotes
