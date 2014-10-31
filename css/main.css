@@ -1,6 +1,4 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800&subset=latin,latin-ext);
-
-/* Some assumptions */
 * {
    margin: 0;
    padding: 0;
@@ -11,7 +9,8 @@
 
 html, body { height: auto; }
 h1, h2, h3, h4, h5, h6 { font-size: 100%; }
-h2 { font-size: 125%; margin-bottom: .5em; }
+h2 { font-size: 125%; }
+h2, h3 { margin-bottom: 1em; }
 p { margin: 1em 0; }
 
 body {
@@ -52,11 +51,11 @@ a:hover { color: #2980B9; }
 }
 
 main {
-   font-size: 115%;
+   font-size: 112%;
    text-align: left;
    margin: 2em auto 0.5em;
    line-height: 1.5em;
-   max-width: 42em;
+   max-width: 50em;
    padding-left: 18px;
    padding-right: 18px;
 }
@@ -99,8 +98,6 @@ code {
    border-radius: 2px;
    padding: 1px 3px;
 }
-
-
 
 pre {
    display: block;
@@ -196,4 +193,19 @@ footer #date {
    left: 0;
    width: 100%;
    height: 100%;
+}
+
+.highlight pre code * {
+  white-space: nowrap;    // this sets all children inside to nowrap
+}
+
+.highlight pre {
+  word-wrap: normal;
+  max-height: 30em;
+  overflow: auto;       // this sets the scrolling in x
+}
+
+.highlight pre code {
+  white-space: pre;       // forces <code> to respect <pre> formatting
+  color: #637c84
 }
