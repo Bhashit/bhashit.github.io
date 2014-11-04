@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hibernate with Scala - with less pain
+title: Using Hibernate with Scala Options - with less pain
 date: 2014-10-28
 comments: true
 ---
