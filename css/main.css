@@ -25,6 +25,8 @@ body {
 a { color: #3498DB; text-decoration: none; }
 a:hover { color: #2980B9; }
 
+.clear-float { clear: both; }
+
 /* The blog posts archive, a long list */
 .posts {
    list-style-type: none;
@@ -59,6 +61,8 @@ main {
    padding-left: 18px;
    padding-right: 18px;
 }
+
+main > * {padding: 0 .5em;}
 
 header a {
    font-weight: bold;
@@ -150,8 +154,6 @@ article ul, article ol {
 
 article img {
    border-radius: 4px;
-   -webkit-border-radius: 4px;
-   -moz-border-radius: 4px;
    display: block;
    margin-left: auto;
    margin-right: auto;
@@ -193,6 +195,50 @@ footer #date {
    left: 0;
    width: 100%;
    height: 100%;
+}
+
+h2#footnotes {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px dashed #eee;
+}
+
+#social-share  {
+    padding-top: 20px;
+
+}
+
+#social-share li {
+    list-style-type: none;
+    float: left;
+    margin-left: 20px;
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    border: 1px solid #dedede;
+    line-height: 1.5em;
+    text-align: center;
+    transition-duration: 0.3s;
+    transition-property: transform;
+    cursor: pointer;
+}
+
+#social-share li:first-child { margin-left: 0; }
+#social-share li:hover { transform: translateY(-5px); }
+#social-share li a {
+    display: inline-block;
+    width: 100%;
+}
+
+#social-share li.facebook a { color: #3B5998; }
+#social-share li.googleplus a { color: #DD4B39; }
+#social-share li.twitter a { color: #55ACEE; }
+#social-share li.reddit a { color: #444; }
+
+#comments {
+    margin-top: 20px;
+    border-top: 1px dashed #eee;
+    padding-top: 70px;
 }
 
 .highlight pre code * {
