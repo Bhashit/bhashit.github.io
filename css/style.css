@@ -1,5 +1,6 @@
-
 main.container { padding-top: 70px; }
+
+
 
 .posts {
    list-style-type: none;
@@ -21,28 +22,11 @@ main.container { padding-top: 70px; }
    margin-right: 1em;
 }
 
-.meta {
-   color: #aaa;
-}
+.meta { color: #aaa; }
 
-blockquote {
-   padding: 0px 18px;
-   margin: 15px 0;
-   border-left: 4px solid rgba(52, 73, 94, 0.85);
-}
+pre code { font-size: 90%; }
 
-blockquote p {
-   margin-bottom: 0;
-   color: #7a7a7a;
-}
-
-pre code {
-   font-size: 90%;
-}
-
-.highlight {
-   margin-bottom: 20px;
-}
+.highlight { margin-bottom: 20px; }
 
 .highlight pre {
    margin-bottom: 0;
@@ -79,6 +63,8 @@ article img.emoji {
   border-radius: 0;
 }
 
+footer { margin-top: 25px; }
+
 footer #date {
    float: right;
 }
@@ -96,10 +82,9 @@ h2#footnotes {
     border-top: 1px dashed #eee;
 }
 
-#social-share  {
-    padding-top: 20px;
-    padding-left: 0;
-}
+#social-share  { padding-top: 20px; }
+
+#social-share ul { padding-left: 0;}
 
 #social-share li {
     list-style-type: none;
@@ -131,5 +116,5 @@ h2#footnotes {
 #comments {
     margin-top: 20px;
     border-top: 1px dashed #eee;
-    padding-top: 70px;
+    padding-top: 50px;
 }
