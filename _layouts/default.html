@@ -4,27 +4,23 @@
       <meta charset="utf-8">
       <meta name="description" content="{{ site.description }}" />
       <meta name="author" content="Bhashit Parikh" />
-      <meta name="viewport" content="width=device-width" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/feed.xml" />
-      <link rel="stylesheet" href="/css/main.css" />
-      <link rel="stylesheet" href="/css/normalize.css" />
+      <link rel="stylesheet" href="/bootstrap/3.3.1/themes/yeti/bootstrap.min.css" />
+      <link rel="stylesheet" href="/css/style.css" />
       <link rel="stylesheet" href="/css/colorful.css" />
       <link rel="stylesheet" href="/font-awesome/4.2.0/css/font-awesome.min.css" />
       <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
       <link rel="icon" href="/favicon.ico" type="image/x-icon">
       <title>{{ page.title }}</title>
    </head>
-
    <body>
-      <main>
-         <header>
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-         </header>
-         {{ content }}
-
-         {% if page.comments %}
-           {% include disqus.html  %}
-         {% endif %}
+      {% include nav.html  %}
+      <main class="container">
+        <div class="row">
+          {{ content }}
+        </div> 
       </main>
       {% include google-analytics.html %}
    </body>

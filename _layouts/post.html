@@ -2,42 +2,43 @@
 layout: default
 ---
 
-<article>
-    <header>
-        <h2>{{ page.title }}</h2>
-    </header>
-   <hr />
-   {{ content }}
-</article>
-
-<footer>
-   <div id="date" class="meta">
+<article class="col-md-8">
+  <header>
+    <h1>{{ page.title }}</h1>
+  </header>
+  <hr />
+  {{ content }}
+  <footer>
+    <div id="date" class="meta">
       {{ page.date | date_to_string }}
-   </div>
-   <div id="return">
+    </div>
+    <div id="return">
       <a href="/">&laquo; Return to the home page</a>
-   </div>
-   
-   <div id="social-share">
-     <h2>share</h2>
-     <ul class="fa-2x">
-       <li class="twitter">
-         <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via=bhashit"
-            title="Share on Twitter" target="_blank">
-           <span class="fa fa-twitter"></span></a></li>
-       <li class="facebook">
-         <a href="https://www.facebook.com/sharer/sharer.php?t={{ page.title }}&u={{ site.url }}{{ page.url }}"
-            title="Share on Facebook" target="_blank">
-           <span class="fa fa-facebook"></span></a></li>
-       <li class="googleplus">
-         <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}"
-            title="Share on Google Plus" target="_blank">
-           <span class="fa fa-google-plus"></span></a></li>
-       <li class="reddit">
-         <a href="http://reddit.com/submit?url={{ site.url }}{{ page.url }}&title={{ page.title }}"
-            title="Submit on Reddit" target="_blank">
-           <span class="fa fa-reddit"></span></a></li>
-       <br class="clear-float"  />
-     </ul>
-   </div>
-</footer>
+    </div>
+    <div id="social-share">
+      <h2>share</h2>
+      <ul class="fa-2x">
+        <li class="twitter">
+          <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via=bhashit"
+             title="Share on Twitter" target="_blank">
+            <span class="fa fa-twitter"></span></a></li>
+        <li class="facebook">
+          <a href="https://www.facebook.com/sharer/sharer.php?t={{ page.title }}&u={{ site.url }}{{ page.url }}"
+             title="Share on Facebook" target="_blank">
+            <span class="fa fa-facebook"></span></a></li>
+        <li class="googleplus">
+          <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}"
+             title="Share on Google Plus" target="_blank">
+            <span class="fa fa-google-plus"></span></a></li>
+        <li class="reddit">
+          <a href="http://reddit.com/submit?url={{ site.url }}{{ page.url }}&title={{ page.title }}"
+             title="Submit on Reddit" target="_blank">
+            <span class="fa fa-reddit"></span></a></li>
+        <br class="clear-float"  />
+      </ul>
+    </div>
+  </footer>
+  {% if page.comments %}
+    {% include disqus.html  %}
+  {% endif %}
+</article>

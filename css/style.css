@@ -1,0 +1,136 @@
+
+main.container { padding-top: 70px; }
+
+.posts {
+   list-style-type: none;
+   margin-bottom: 2em;
+   padding-left: 0;
+}
+
+.posts li {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   line-height: 2em;
+}
+
+.posts span {
+   color: #aaa;
+   font-family: Monaco, "Courier New", monospace;
+   font-size: 75%;
+   margin-right: 1em;
+}
+
+.meta {
+   color: #aaa;
+}
+
+blockquote {
+   padding: 0px 18px;
+   margin: 15px 0;
+   border-left: 4px solid rgba(52, 73, 94, 0.85);
+}
+
+blockquote p {
+   margin-bottom: 0;
+   color: #7a7a7a;
+}
+
+pre code {
+   font-size: 90%;
+}
+
+.highlight {
+   margin-bottom: 15px;
+   border-radius: 4px;
+}
+
+.highlight pre {
+   margin-bottom: 0;
+}
+
+.highlight pre code * {
+  white-space: nowrap;    // this sets all children inside to nowrap
+}
+
+.highlight pre {
+  word-wrap: normal;
+  max-height: 30em;
+  overflow: auto;       // this sets the scrolling in x
+}
+
+.highlight pre code {
+  white-space: pre;       // forces <code> to respect <pre> formatting
+  color: #637c84
+}
+
+
+article img {
+   border-radius: 4px;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   max-width: 100%;
+   vertical-align: middle;
+   page-break-inside: avoid;
+}
+
+article img.emoji {
+  display: inline;
+  border-radius: 0;
+}
+
+footer #date {
+   float: right;
+}
+
+footer #return,
+footer #date {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+}
+
+h2#footnotes {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px dashed #eee;
+}
+
+#social-share  {
+    padding-top: 20px;
+
+}
+
+#social-share li {
+    list-style-type: none;
+    float: left;
+    margin-left: 20px;
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    border: 1px solid #dedede;
+    line-height: 1.5em;
+    text-align: center;
+    transition-duration: 0.3s;
+    transition-property: transform;
+    cursor: pointer;
+}
+
+#social-share li:first-child { margin-left: 0; }
+#social-share li:hover { transform: translateY(-5px); }
+#social-share li a {
+    display: inline-block;
+    width: 100%;
+}
+
+#social-share li.facebook a { color: #3B5998; }
+#social-share li.googleplus a { color: #DD4B39; }
+#social-share li.twitter a { color: #55ACEE; }
+#social-share li.reddit a { color: #444; }
+
+#comments {
+    margin-top: 20px;
+    border-top: 1px dashed #eee;
+    padding-top: 70px;
+}

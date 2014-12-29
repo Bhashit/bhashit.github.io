@@ -3,8 +3,8 @@ layout: default
 title: Bhashit Parikh
 ---
 
-<div id="home">
-   <h2>Blog posts</h2>
+<div id="home" class="col-md-8">
+   <h1>Blog posts</h1>
    <ul class="posts">
       {% for post in site.posts %}
       <li><span>&gt; {{ post.date | date_to_string }}</span> <a href="{{ post.url }}">{{ post.title }}</a></li>
