@@ -5,15 +5,12 @@ date: 2014-12-29
 comments: true
 ---
 
-Sometime around the end of year 2000, just before the most important[^1]
-two years of my school-time were about to start, my father bought me a
-new computer, with internet connection. Up until then, I had been the
-top student all the schools I had attended, for 10 straight
-years.
-
-
-[^1]: Important by the Indian schooling standards. As I found out later on, they
-just don't really matter. The Indian education system is completely
-screwed up.
-
+On my last birthday, in September, I gifted myself a huge set of mathematics
+books. All of them very carefully chosen. For past 4 years or so, I have been trying to get back into
+learning math. And when I say "learning",
+I don't mean memorizing a bunch of formulas and spewing them out as
+required. No. What I wanted to do was really understand all the
+magical stuff that math seems to promise. Ever since I could
+understand them, I have always enjoyed precise yet magical theories of
+math and physics. Although, I never really understood them.
 
