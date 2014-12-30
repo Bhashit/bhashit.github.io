@@ -108,7 +108,7 @@ likely candidate for optimizing that experience is
 including facebook, Apple iTunes store, Microsoft, Rackspace, Adobe,
 NASA, Yahoo, Airbnb etc. use CDNs to deliver data faster to you.
 
-The reason Google (and now pretty much every search engine now) is so
+The reason Google (and now pretty much every search engine) is so
 successful at finding relevant result is the use of
 [graph theory][graph-theory] for analyzing back links. And at least
 the basic graph theory is not very hard.
