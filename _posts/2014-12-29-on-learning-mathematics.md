@@ -129,7 +129,7 @@ mathematics. And as [Joel Spolsky says][joel-func-prog]
 > programming.[^1]
 
 The world as you know it wouldn't exist without math. I think I can go
-on an on about the utility of math. But I think I should present one
+on and on about the utility of math. But I think I should present one
 more side of the argument.
 
 ### Computer science thrives because of people who know math.
