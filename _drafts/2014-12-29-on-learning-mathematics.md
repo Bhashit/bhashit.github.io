@@ -71,23 +71,23 @@ as well. We decided to put aside at least 4 hours every week for
 math. And now comes the reason for writing this post. *The strategy
 works*. Just like it worked for Steve Yegge, it worked for three
 ordinary programmers like us. It's been about 4 months and we are as
-motivated as we were at the beginning.
+motivated as we were at the beginning. Math has now become a habit.
 
-In September, I shared all my resources with them. We don't do it like
-a class. I suggested possible pathways for learning, but all of us do
-it at our own pace and liking. Now, we get together every week. And
-almost every week, we exceed our quota of 4 hours. We are having a lot
-of fun. 
+In September, I shared all the resources with them. We don't do it
+like a class. I did suggest some possible pathways for learning, but
+all of us do it at our own pace and liking. Now, we get together every
+week. And every week, we exceed our quota of 4 hours; sometimes
+by 5-6 hours. We are having a lot of fun.
 
-So far, I have gained a lot of confidence. I know that I am never
-going to learn everything about math, but I *will* be able to know a
-*lot of* useful and amazing stuff.
+In the process, I have gained a lot of confidence. I know that I am
+never going to learn everything about math, but I *will* be able to
+know a *lot of* useful and amazing stuff.
 
 ## Why Do Programmers Need Math
 
-If you read those Steve Yegge posts I mentioned above, I am guessing
-you might not need any more motivation to learn math. However, I still
-want to present two arguments that are not apparent in his articles.
+If you read those Steve Yegge posts I mentioned above, I guess you
+might have seen enough to answer that question. However, I still want
+to present two arguments that are not apparent in his articles.
 
 ### Math is literally everywhere
 
@@ -97,15 +97,16 @@ few examples.
 
 Every single time you do anything that involves the use of encryption,
 math is involved. More specifically, it's
-[number theory][number theory]. Every time you log in to facebook, buy
+[number theory][number-theory]. Every time you log in to facebook, buy
 something on amazon, send a message on WhatsApp, do online banking, or
-send money on PayPal, math is helping you make these things
-secure. At least the basics of number theory are not that hard.
+send money on PayPal, math is at work, making them secure. The basic
+ideas behind this math are not that hard to understand.
 
 When those [CDN][cdn] services deliver the content to you, the most
 likely candidate for optimizing that experience is
 [graph theory][graph-theory]. Pretty much all of the popular services,
-including facebook, use CDNs to deliver data faster to you.
+including facebook, Apple iTunes store, Microsoft, Rackspace, Adobe,
+NASA, Yahoo, Airbnb etc. use CDNs to deliver data faster to you.
 
 The reason Google (and now pretty much every search engine now) is so
 successful at finding relevant result is the use of
@@ -125,7 +126,7 @@ mathematics. And as [Joel Spolsky says][joel-func-prog]
 > Without understanding functional programming, you can't invent
 > MapReduce, the algorithm that makes Google so massively
 > scalable. The terms Map and Reduce come from Lisp and functional
-> programming.
+> programming.[^1]
 
 The world as you know it wouldn't exist without math. I think I can go
 on an on about the utility of math. But I think I should present one
@@ -145,7 +146,7 @@ read this [wikipedia entry for John Von Neumann][von-neumann]? It's
 mind boggling to think that a single person could do all of
 that. Remember that all the commonly used computer architecture and
 programming models are called
-["Von Neumann Architecture"][von-neumann-arch].
+["Von Neumann Models"][von-neumann-arch].
 
 [Alan Turing][turing], the man who formalized the concepts of
 algorithms and computation with his Turing Machine and who is
@@ -170,11 +171,11 @@ I try. But that's not the point. The point is that math is the
 ultimate tool that you can have in your toolbox. I prefer not to be
 the man with only a hammer in his toolbox.
 
-## Resources
+## What worked for me
 
 The whole point of writing this post was to convey that it's possible
 for everyday, run-of-the-mill programmers to learn math. Also, I
-wanted to share some of the resources that found very useful.
+wanted to share some of the resources that I found very useful.
 
 ### Strategy
 
@@ -189,7 +190,6 @@ telling in his posts to your needs.
 2. [Math Every Day][Math-Every-Day]: Steve Yegge
 3. [Math For Programmers][math-for-programmers]: Steve Yegge
 
-
 ### Online Resources
 
 There are a lot of resources available online, but following are the
@@ -200,7 +200,7 @@ ones that I found to be the most useful.
    suggested books are the de facto standards in those fields. I have
    purchased some of the math books based on this list (of course,
    after doing a lot more research on them).
-2. [MIT OCW. "Math for Computer Science"][math-cs-mit]. This is
+2. [MIT OCW. Math for Computer Science][math-cs-mit]. This is
    the single best course that you can take for learning a lot of the
    stuff required for computer science. Number theory, graph theory,
    asymptotics and probability are included. The video lectures are
@@ -210,7 +210,7 @@ ones that I found to be the most useful.
    programming are concerned.
 3. [MIT OCW. Highlights of Calculus][math-calculus-mit]. Taught by the
    legendary Gilbert Strang, this is a super introduction to Calculus.
-4. [Calculus One at Coursera][calc-one-coursera]. Taught by Jim
+4. [Coursera. Calculus One][calc-one-coursera]. Taught by Jim
    Fowler, this is another amazing introduction to Calculus. The
    manner in which he teaches is infectiously enthusiastic.
 5. [http://betterexplained.com/](http://betterexplained.com/). This is
@@ -226,17 +226,40 @@ ones that I found to be the most useful.
    math. Browse around this site and you will find a lot of
    interesting lists and other material related to math.
 
-Of course, every time I got to [Coursera](https://www.coursera.org/)
+Of course, every time I go to [Coursera](https://www.coursera.org/)
 or
 [MIT OCW](http://ocw.mit.edu/courses/audio-video-courses/#mathematics)
 sites, I feel like a kid in a candy store. So, as I said earlier,
 choose whatever strikes your fancy.
 
+### A few personal recommendations.
+
+1. [What Is Mathematics][courant-math]. A superb portrait of the math
+   universe, written in a very accessible manner. The chapters are
+   largely independent of one another and all of them begin with some
+   light material. I use it as leisure reading, jumping from topic to
+   topic.
+2. [Godel, Escher and Bach][geb]. One of the classics. This is
+   tangential to the study of mathematics, but the ideas presented in
+   this book do use quite a bit of math, in a very easy to understand
+   manner. Read the reviews on Amazon or Goodreads.
 
 
-[^1]: In our university, students were required to create one software
-project as a part of their final year curriculum. The project
-accounted for 20% of the total marks.
+## Conclusion
+
+Using this strategy, so far, I have become quite comfortable with a
+lot of topics in math. That includes the basics of number theory, graph
+theory, and a lot of pre-calculus. I understand what calculus is all
+about. And I know what <i>sin</i>, <i>cos</i> and the exponential
+constant <i>e</i> mean. I can even solve a few problems using various
+types of induction.
+
+Of course, even in these topics, I don't understand everything yet,
+and I am okay with that. Because I am getting better every week.
+
+
+[^1]: I know that Google retired map-reduce some time ago.
+
 
 [Math-Every-Day]: https://sites.google.com/site/steveyegge2/math-every-day "Math Every Day"
 
@@ -271,3 +294,19 @@ accounted for 20% of the total marks.
 [calc-one-coursera]: https://www.coursera.org/learn/calculus1
 
 [10-must-read-math]: http://math-blog.com/2007/07/17/ten-must-read-books-about-mathematics/
+
+[apostol-vol-1]: http://www.amazon.com/Calculus-Vol-One-Variable-Introduction-Algebra/dp/0471000051/
+
+[apostol-vol-2]: http://www.amazon.com/Calculus-Vol-Multi-Variable-Applications-Differential/dp/0471000078/
+
+[courant-math]: http://www.amazon.com/Mathematics-Elementary-Approach-Ideas-Methods/dp/0195105192/
+
+[prob-logic-science]: http://www.amazon.com/Probability-Theory-E-T-Jaynes/dp/0521592712
+
+[linear-algebra-strang]: http://www.amazon.com/Linear-Algebra-Its-Applications-4th/dp/0030105676/
+
+[algebra-cynthia]: http://www.amazon.com/Algebra-Trigonometry-Cynthia-Y-Young/dp/0470222735/
+
+[prob-feller]: http://www.amazon.com/Introduction-Probability-Theory-Applications-Vol/dp/0471257087/
+
+[geb]: http://www.amazon.com/G%C3%B6del-Escher-Bach-Eternal-Golden/dp/0465026567/
