@@ -21,14 +21,14 @@ become a professional mathematician. I don't. It's more like a hobby
 for me; and if it helps me professionally, all the better.
 
 With that, I started learning math sometime in 2010. A few hours every
-week. That went on for about 3 months. After that, sometime in 2012, I
-read a post by Steve Yegge, titled [Math Every Day][Math-Every-Day]
-and decided to try that strategy. I tried giving at least half an
-hour everyday to math. Considering that I was giving too much time to
-my job, this didn't work out and after a few weeks, I was back to
-no-math. And there were several occasions when I took up math on a
-weekend thinking that I would do it every weekend. After one or two
-weekends, it just never happened.
+week. That petered out in about 3 months. After that, sometime in
+2012, I read a post by Steve Yegge, titled
+[Math Every Day][Math-Every-Day] and decided to try that strategy. At
+least half an hour everyday for math. Considering that I was giving
+too much time to my job, this too was ill fated and after a few weeks,
+I was back to no-math. And there were several occasions when I took up
+math on a weekend thinking that I would do it every weekend. After one
+or two weekends, it just never happened.
 
 The single biggest factor that was getting in the way was the fact
 that I was trying to dive head first into math. Doing a lot of
@@ -39,7 +39,7 @@ leads to the frustrating feeling that you are getting nowhere.
 A few months ago, I was getting desperate to get back into math. But
 this time, I decided to try out a different strategy. One that I have
 been using successfully for a lot of other things, but for some
-reason, didn't apply it to learning math. The strategy was to take
+reason, never applied it to learning math. The strategy was to take
 math like a hobby that it is. Not getting caught up in too many
 details at once. The strategy works something like this:
 
@@ -55,7 +55,7 @@ details at once. The strategy works something like this:
 Just around the same time I was beginning to apply this strategy, I
 came across a post titled
 ["Mathematicians are Chronically lost and confused"][mathemaicians-lost]. It
-says all of the things that I had concluded were okay. Getting lost
+said that all of the things that I had concluded were okay. Getting lost
 and confused while getting into a large and seemingly infinite
 field. Then, to top all of these things off, I found another gem by
 Steve Yegge. This one was titled
@@ -64,14 +64,14 @@ suggested by Steve to my strategy. That post says pretty much every
 thing I could have said in this post. It's just amazing.
 
 I am a freelance programmer. I have a couple of friends who do
-freelance work and we get together on a regular basis,
-sometime to work together, sometime just to hang out. I knew that both
-of them were interested in math so I suggested this strategy to them
-as well. We decided to put aside at least 4 hours every week for
-math. And now comes the reason for writing this post. *The strategy
-works*. Just like it worked for Steve Yegge, it worked for three
-ordinary programmers like us. It's been about 4 months and we are as
-motivated as we were at the beginning. Math has now become a habit.
+freelance work and we get together on a regular basis, sometime to
+work together, sometime just to hang out. I knew that both of them
+were interested in math so I suggested this strategy to them and we
+decided to put aside at least 4 hours every week for math. Now comes
+the reason for writing this post. *The strategy works*. Just like it
+worked for Steve Yegge, it worked for three ordinary programmers like
+us. It's been about 4 months and we are even more motivated than we
+were at the beginning. Math has now become a habit.
 
 In September, I shared all the resources with them. We don't do it
 like a class. I did suggest some possible pathways for learning, but
@@ -91,9 +91,9 @@ to present two arguments that are not apparent in his articles.
 
 ### Math is literally everywhere
 
-Pretty much all of technology that make our lives better is either
-aided by math or is completely dependent on it. Let me try to give a
-few examples.
+Pretty much all the technologies that make our lives better are either
+aided by math or exist because of it. Let me try to give a few
+examples.
 
 Every single time you do anything that involves the use of encryption,
 math is involved. More specifically, it's
@@ -248,15 +248,17 @@ choose whatever strikes your fancy.
 ## Conclusion
 
 Using this strategy, so far, I have become quite comfortable with a
-lot of topics in math. That includes the basics of number theory, graph
-theory, and a lot of pre-calculus. I understand what calculus is all
-about. And I know what <i>sin</i>, <i>cos</i> and the exponential
-constant <i>e</i> mean. I can even solve a few problems using various
-types of induction.
+lot of topics in math. That includes the basics of number theory,
+graph theory, and a lot of pre-calculus. I have just begun to
+understand what calculus is all about. And I know what <i>sin</i>,
+<i>cos</i> and the exponential constant <i>e</i> mean. I can even
+solve a few problems using various types of induction.
 
 Of course, even in these topics, I don't understand everything yet,
-and I am okay with that. Because I am getting better every week.
+and I am okay with that. Not only because I *don't* need to understand
+everything, but also because I am getting better every week.
 
+## Footnotes
 
 [^1]: I know that Google retired map-reduce some time ago.
 

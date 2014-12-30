@@ -11,6 +11,7 @@ gems:
 kramdown:
   input: GFM
   auto_ids: true
+  hard_wrap: false
   footnote_nr: 1
   entity_output: as_char
   toc_levels: 1..6
