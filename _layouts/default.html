@@ -17,13 +17,19 @@
    </head>
    <body>
       {% include nav.html  %}
-      <main class="container">
+      <div class="container" id="container">
         <div class="row">
           {{ content }}
+          {% include about-box.html %}
         </div> 
-      </main>
+      </div>
       {% include google-analytics.html %}
       <script src="/js/jquery-2.1.1.min.js"></script>
       <script src="/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+      <script>
+        $(function() {
+          $('#skype-link').click(function(e) {e.preventDefault(); return false; }).popover({placement: 'top'});
+        })
+      </script>
    </body>
 </html>
