@@ -251,14 +251,17 @@ hard.
    largely independent of one another and all of them begin with some
    light material. I use it as leisure reading, jumping from topic to
    topic.
-2. [Godel, Escher and Bach][geb]. One of the classics. This is
-   tangential to the study of mathematics, but the ideas presented in
-   this book do use quite a bit of math, in a very easy to understand
-   manner. Read the reviews on Amazon or Goodreads.
+2. [Godel, Escher and Bach][geb]. This is tangential to the study of
+   mathematics, but the ideas presented in this book do explain some
+   really fundamental stuff about math; things like the difference
+   between the symbols and their interpretations, or why no powerful
+   mathematical system can be complete and consistent. Even with all
+   that serious stuff, the book is virtually unputdownable. Read some
+   of the reviews on Goodreads or Amazon.
 3. [Vi Hart's YouTube channel](https://www.youtube.com/user/Vihart):
    Vi Hart is a self-described "recreational mathemusician". Her
-   videos are incredibly fun, informative and insightful. It really
-   is recreational math.
+   videos are incredibly fun, informative and insightful, all at the
+   same time.
 
 ## Conclusion
 
