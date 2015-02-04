@@ -81,7 +81,15 @@ IDEs are here to stay, no doubt about that. But good hackers are always learning
 
 - My own emacs config resides on [this github repo][emacs-github]. It's fairly well documented. It's a good idea to keep your emacs config in a repo, since it's piece of code, and you'll regret it if you lose it [^4]
 - [Prelude][prelude] is an emacs distribution that makes it easy to get started with emacs. I am not using it, but exploring their config helped me setup some good defaults. Plus, my required-package installation code was inspired by them.
-- [Emacs Starter Kit][emacs-starter-kit] is an emacs plugin that provides better defaults than the OOTB emacs. Again, I am not using it, but exploring their code is a good learning experience.
+- [Emacs Starter Kit][emacs-starter-kit] is an emacs plugin that
+  provides better defaults than the OOTB emacs. Again, I am not using
+  it, but exploring their code is a good learning experience.
+- [Emacs Live][emacs-live]: The most recent addition to the list of
+  curated emacs configs. At this point, it is still going through a
+  beta phase. However, the curators are long time emacs users and
+  contributors. I am inclined to think that this will end up being the
+  config that provides the best starter environment. It is especially
+  targeted at clojure development.
 - [Emacs Documentation][emacs-docs] is amazaingly complete.
 - [The Little Schemer][little-schemer] is a good book for basic introduction to the Scheme programming language (which is a dialect of lisp).
 - [ergoemacs.org][ergoemacs] has really good introductory material on emacs, as well as several advanced tutorials.
@@ -157,3 +165,5 @@ Of course, googling will turn up several emacs resources.
 [chris-granger]: http://www.chris-granger.com/
 
 [oreilly-vim]: http://www.oreillynet.com/pub/a/oreilly/ask_tim/1999/unix_editor.html
+
+[emacs-live]: https://github.com/overtone/emacs-live
