@@ -129,8 +129,8 @@ that any number has only one representation as a decimal. Well, as the
 > 
 
 You may encounter more bizarre results and conclusions as you go
-exploring more and more math. However, along with some really mind
-bending stuff, math delivers some fantastically beautiful results.
+exploring more and more math. However, along with some mind bending
+stuff, math delivers some fantastically beautiful results.
 
 ## Euler's Identity, aka the most beautiful equation in mathematics
 
@@ -161,8 +161,8 @@ tale.
 
 This is like some mad scientist tried to combine the genes of the
 Joker, Sauron and the Galactus to create the ultimate super-villain
-and instead, what came out was a mild-mannered super-hero who restored
-the peace in the universe.
+and instead, what came out was a super-hero with high cheekbones who
+restored the peace in the universe.
 
 This equation has been a source of a lot of research and
 discussions. Mathematicians have written entire books dedicated to it,
