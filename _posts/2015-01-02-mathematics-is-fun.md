@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Mathematics - Bizarre, Fun, Beautiful: all at the same time"
+title: "Math is fun"
 date: 2015-01-02
 comments: true
 ---
