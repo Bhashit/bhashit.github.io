@@ -5,13 +5,34 @@ date:   2014-08-11
 comments: true
 ---
 
-Don't get misled by the title. I am not saying that only the alpha-geeks can use [emacs][gnu-emacs]. The reason for that phrasing is that it sounds really cool; much better than something like "emacs: a text editor for any competent programmer (who knows at least one dialect of lisp)". That just sounds lame, even though that's what I think. The title is also a reference to a [Steve Yegge post][steve-yegge-emacs] that I read a long time ago where he says that
+Don't get misled by the title. I am not saying that only the
+alpha-geeks can use [emacs][gnu-emacs]. The reason for that phrasing
+is that it sounds really cool; much better than something like "emacs:
+a text editor for any competent programmer (who knows at least one
+dialect of lisp)". That just sounds lame, even though that's what I
+think. The title is also a reference to a
+[Steve Yegge post][steve-yegge-emacs] that I read a long time ago
+where he says that
 
-> Emacs is to Eclipse as a lightsaber is to a blaster — but a blaster is a lot easier for anyone to pick up and use
+> Emacs is to Eclipse as a lightsaber is to a blaster — but a blaster
+> is a lot easier for anyone to pick up and use
 
-Besides, I don't think I come even close to be considered a Jedi when it comes to programming. I am closer to an apprentice who just got his hands on a lightsaber and is just trying poke it around; see what cool things he can do. Poking around is what I have been doing with emacs for a week; and after the first day, I have been thinking why I didn't start doing  it sooner.
+Besides, I don't think I come even close to be considered a Jedi when
+it comes to programming. I am closer to an apprentice who just got his
+hands on a lightsaber and is just trying poke it around; see what cool
+things he can do. Poking around is what I have been doing with emacs
+for a week; and after the first day, I have been thinking why I didn't
+start doing it sooner.
 
-Whenever I have tried to learn some new or non-mainstream programming language, like `scheme`, getting a decent text editor has always been a problem. Most of the time I have used [vim][vim]. And vim is a great editor by all accounts. I have been using it ever since I switched to Linux 7-8 years ago. However, I never got around to learning any advanced features or `vimscript`. I tried learning emacs by following the built in tutorial twice in the past, but never went any further. Learning to use one of these two editors well had been in my todo list for at least 3-4 years.
+Whenever I have tried to learn some new or non-mainstream programming
+language, like `scheme`, getting a decent text editor has always been
+a problem. Most of the time I have used [vim][vim]. And vim is a great
+editor by all accounts. I have been using it ever since I switched to
+Linux 7-8 years ago. However, I never got around to learning any
+advanced features or `vimscript`. I tried learning emacs by following
+the built in tutorial twice in the past, but never went any
+further. Learning to use one of these two editors well had been in my
+todo list for at least 3-4 years.
 
 Then it finally happened, the [`M-x butterfly`][emacs-xkcd] was pressed somewhere and the forces of the nature combined to crash my [scala-ide][scala-ide] twice in the span of a few minutes, while I was working on an important side project. With eclipse, crashing is something that happens on almost daily basis with me. But this time, there were two things different:
 
@@ -105,8 +126,14 @@ IDEs are here to stay, no doubt about that. But good hackers are always learning
 
 ## Resources
 
-- My own emacs config resides on [this github repo][emacs-github]. It's fairly well documented. It's a good idea to keep your emacs config in a repo, since it's piece of code, and you'll regret it if you lose it [^4]
-- [Prelude][prelude] is an emacs distribution that makes it easy to get started with emacs. I am not using it, but exploring their config helped me setup some good defaults. Plus, my required-package installation code was inspired by them.
+- My own emacs config resides on
+  [this github repo][emacs-github]. It's fairly well documented. It's
+  a good idea to keep your emacs config in a repo, since it's piece of
+  code, and you'll regret it if you lose it [^4]
+- [Prelude][prelude] is an emacs *distribution* that makes it easy to
+  get started with emacs. I am not using it, but exploring their
+  config helped me setup some good defaults. Plus, my required-package
+  installation code was inspired by them.
 - [Emacs Starter Kit][emacs-starter-kit] is an emacs plugin that
   provides better defaults than the OOTB emacs. Again, I am not using
   it, but exploring their code is a good learning experience.
@@ -116,23 +143,56 @@ IDEs are here to stay, no doubt about that. But good hackers are always learning
   contributors. I am inclined to think that this will end up being the
   config that provides the best starter environment. It is especially
   targeted at clojure development.
+- [Spacemacs][spacemacs]: This is another addition to the
+  pre-configured emacs distros that make life easier for people who
+  want to get started with emacs. If you are a [vi][vim] user, this
+  could be your preferred choice since it seems to have gone farthest
+  in terms of making it compatible with [vi][vim] key bindings. Even
+  if you are not a vi user, this distro has amazing look and
+  feel. Polished and with lots of goodies to make emacs experience
+  even better [^5].
 - [Emacs Documentation][emacs-docs] is amazaingly complete.
-- [The Little Schemer][little-schemer] is a good book for basic introduction to the Scheme programming language (which is a dialect of lisp).
-- [ergoemacs.org][ergoemacs] has really good introductory material on emacs, as well as several advanced tutorials.
-- [masteringemacs.org][matering-emacs] is another resource I found very useful.
+- [The Little Schemer][little-schemer] is a good book for basic
+  introduction to the Scheme programming language (which is a dialect
+  of lisp).
+- [ergoemacs.org][ergoemacs] has really good introductory material on
+  emacs, as well as several advanced tutorials.
+- [masteringemacs.org][matering-emacs] is another resource I found
+  very useful.
 
-Of course, googling will turn up several emacs resources.
+And, Of course, Google.
 
 ## Footnotes
 
-[^1]: I know, eclipse, and almost all the other development tools are free, and nobody has a right to complain about the free things they get. I am not trying to be ungrateful to the developers of these great tools at all. I am extremely grateful, actually. But, even with free tools, I think people can still get frustrated.
+[^1]: I know, eclipse, and almost all the other development tools are
+    free, and nobody has a right to complain about the free things
+    they get. I am not trying to be ungrateful to the developers of
+    these great tools at all. I am extremely grateful, actually. But,
+    even with free tools, I think people can still get frustrated.
 
-[^2]: Although, the week I spent with emacs was not a normal 9-to-5, 5 days a week kind of week. It was a hacker week, in which I spent almost all my waking hours digging on the internet and experimenting.
+[^2]: Although, the week I spent with emacs was not a normal 9-to-5, 5
+    days a week kind of week. It was a hacker week, in which I spent
+    almost all my waking hours digging on the internet and
+    experimenting.
 
-[^3]: Of course, you will have some WTF moments when you start using it. Like: WTF, who was the ass-hole who created these copy-paste short-cuts! Don't give up. I think this is the primary reason there aren't more emacs users out there. I gave up on emacs twice in the past for that reason. This time, I marched on and the WTF phase didn't last longer than two days.
+[^3]: Of course, you will have some WTF moments when you start using
+    it. Like: WTF, who was the ass-hole who created these copy-paste
+    short-cuts! Don't give up. I think this is the primary reason
+    there aren't more emacs users out there. I gave up on emacs twice
+    in the past for that reason. This time, I marched on and the WTF
+    phase didn't last longer than two days.
 
-[^4]: There is a  [famous story][oreilly-vim] about Tim O'Reilly switching to vim when he lost his emacs config file. The situation is not that bad now. Out of the box, Emacs is still pretty usable. It now has a GUI for configuration and package installation as well.
+[^4]: There is a [famous story][oreilly-vim] about Tim O'Reilly
+    switching to vim when he lost his emacs config file. The situation
+    is not that bad now. Out of the box, Emacs is still pretty
+    usable. It now has a GUI for configuration and package
+    installation as well.
 
+[^5]: I am not using any of the curated emacs configs or the
+    customized distros since I want to stay close to the metal, and I
+    am enjoying the learning process. That doesn't mean that they are
+    not tempting.
+    
 
 [emacs-github]: [^3]: https://github.com/Bhashit/emacs-config "Bhashit's emacs config github repo"
 
@@ -193,3 +253,5 @@ Of course, googling will turn up several emacs resources.
 [oreilly-vim]: http://www.oreillynet.com/pub/a/oreilly/ask_tim/1999/unix_editor.html
 
 [emacs-live]: https://github.com/overtone/emacs-live
+
+[spacemacs]: https://github.com/syl20bnr/spacemacs
