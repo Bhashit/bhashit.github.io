@@ -80,12 +80,12 @@ This is also **not** an argument against hard work. I think hard work
 is fun. At least the end result is. Most of the time, whenever I have
 needed to push myself hard to get something done, it has always been a
 pleasure. I have worked through weekends, stayed long nights and
-logged 60 hours of work on 40 hour contracts. And the end results have
-always been fulfilling.  Good work, and the subsequent feeling of
-accomplishment, is probably the biggest thing contributing to my
-happiness. And I have been through a brief period when I didn't get my
-hands on problems that required me to work or think hard for
-them. Those weren't exactly fun times.
+logged 60 hours of work on 40 hour contracts. Those have always been
+good times, and the end results have been fulfilling.  Good work, and
+the subsequent feeling of accomplishment, is probably the biggest
+thing contributing to my happiness. And I have been through a brief
+period when I didn't get my hands on problems that required me to work
+or think hard for them. Those weren't exactly fun times.
 
 When I say that I don't want to retire, I don't mean to say that I
 will always continue to be a programmer. I think that will depend on a
