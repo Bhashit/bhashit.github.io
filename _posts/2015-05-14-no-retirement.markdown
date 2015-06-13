@@ -124,9 +124,9 @@ possible for me to enjoy them. After that, I wouldn't care.
 ## Footnotes
 
 [^1]: If you haven't seen [that video][amar-bose] yet, I highly
-    recommend so. For one, Amar Bose is one those ultimate geeks. The
-    reflections are priceless. It's actually so good, I was tempted to
-    take that entire course in acoustics.
+    recommend you do so. For one, Amar Bose is one those ultimate
+    geeks. The reflections are priceless. It's actually so good, I was
+    tempted to take that entire course in acoustics.
 
 [^2]: I know that some of her fiction work involved some really lame
     stuff. I don't care. I think the central ideas about fair
