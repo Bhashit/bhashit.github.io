@@ -66,7 +66,7 @@ could be learning math, learning to invest, or even writing a blog
 post.
 
 I know how important money is. I grew up on Ayn Rand[^1] for fuck's
-sake and some ideas have stuck. I spent whole 3 weeks to learn
+sake and some ideas have stuck. I spent 3 whole weeks to learn
 investing; By going through 3 books, a lot of statistics and a
 microeconomics course. Doing something that pays your bills is
 extremely important. And no matter what your hobbies are, be it
