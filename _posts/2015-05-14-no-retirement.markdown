@@ -58,14 +58,14 @@ others to build their confidence. And it's always a disaster. When
 people are overworked, I think they dream of running away from it all,
 permanently. I think most of them underestimate how much their work
 contributes to their overall happiness. Even if it's a crappy job, I
-know people who do it well enough and find ways to make it
-worthwhile. Hell, I would even say that I have been through that
-myself. I tend to enjoy my free time more if I have been
-productive. And by productive, I just don't mean earning money. It
-could be learning math, learning to invest, or even writing a blog
-post.
+know people who do it well enough and find ways out of it or make it
+worthwhile. And as the legendary geek Amar Bose [said][amar-bose], job
+is what you make it[^1]. I tend to enjoy my free time more if I have
+been productive. And by productive, I just don't mean earning
+money. It could be learning math, learning to invest, or even writing
+a blog post.
 
-I know how important money is. I grew up on Ayn Rand[^1] for fuck's
+I know how important money is. I grew up on Ayn Rand[^2] for fuck's
 sake and some ideas have stuck. I spent 3 whole weeks to learn
 investing; By going through 3 books, a lot of statistics and a
 microeconomics course. Doing something that pays your bills is
@@ -123,6 +123,14 @@ possible for me to enjoy them. After that, I wouldn't care.
 
 ## Footnotes
 
-[^1]: I know that some of her fiction work involved some really lame
+[^1]: If you haven't seen [that video][amar-bose] yet, I highly
+    recommend so. For one, Amar Bose is one those ultimate geeks. The
+    reflections are priceless. It's actually so good, I was tempted to
+    take that entire course in acoustics.
+
+[^2]: I know that some of her fiction work involved some really lame
     stuff. I don't care. I think the central ideas about fair
     exchange of values and the inevitability of reality are solid.
+
+
+[amar-bose]: https://youtu.be/N2UhSnvOcaE?t=3283
