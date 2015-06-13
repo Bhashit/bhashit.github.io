@@ -124,8 +124,8 @@ possible for me to enjoy them. After that, I wouldn't care.
 ## Footnotes
 
 [^1]: If you haven't seen [that video][amar-bose] yet, I highly
-    recommend you do so. For one, Amar Bose is one those ultimate
-    geeks. The reflections are priceless. It's actually so good, I was
+    recommend you do so. For one, Amar Bose is one ultimate
+    nerd. The reflections are priceless. It's actually so good, I was
     tempted to take that entire course in acoustics. You can ignore
     the first few minutes probably where he does a demo of an
     acoustics problem. The rest is, I repeat, priceless.
