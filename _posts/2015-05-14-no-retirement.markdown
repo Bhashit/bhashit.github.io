@@ -121,7 +121,7 @@ since all of that requires at least some mental and physical
 abilities, I guess I'll be able to work for them as long as it's
 possible for me to enjoy them. After that, I wouldn't care.
 
-
+## Footnotes
 
 [^1]: I know that some of her fiction work involved some really lame
     stuff. I don't care. I think the central ideas about fair
