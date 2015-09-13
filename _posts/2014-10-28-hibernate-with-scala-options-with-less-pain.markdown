@@ -63,9 +63,17 @@ class User extends PersistentEntity {
 
 Things are looking a little better now. This is a bit more scala-like. You use field-access and have a private field that hibernate can deal with. Use your own methods to wrap/unwrap `Option`. If you don't like the generated column names, override the default [`NamingStrategy`][naming-strategy].  This is much less verbose than the previous method.
 
-### A partial solution to target scalar types (that doesn't work with Hibernate yet)
+### A partial solution to target scalar types
 
-There is a very easy way to make hibernate work with optional scalars. You can implement the JPA [`AttributeConverter`][attribute-converter] with the [`@Converter`][converter] annotation to convert between your scala types and the their database representations. It's pretty straightforward, so I am not providing a code sample. Unfortunately, it doesn't work with parameterized types yet. Take a look at [HHH-8804][attribute-converter-bug]. The solution to that bug is pretty simple, so I expect it to be fixed soon. Once that is done, the optional scalar types can be handled without any fuss.  The [`Converter`][converter] annotation comes with an `autoApply` attribute and when it is set to `true`, the conversion is supposed to be applied automatically to the target types. I am waiting for that bug to be resolved. I guess I should try to submit a patch myself.
+There is a very easy way to make hibernate work with optional
+scalars. You can implement the JPA
+[`AttributeConverter`][attribute-converter] with the
+[`@Converter`][converter] annotation to convert between your scala
+types and the their database representations. It's pretty
+straightforward, so I am not providing a code sample. The
+[`Converter`][converter] annotation comes with an `autoApply`
+attribute and when it is set to `true`, the conversion is supposed to
+be applied automatically to the target types. 
 
 
 ### A partial solution using UserTypes (scalar types only)
