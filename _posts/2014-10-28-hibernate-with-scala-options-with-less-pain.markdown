@@ -1,11 +1,14 @@
 ---
 layout: post
-title: Using Hibernate with Scala Options - with less pain
+title: Using Hibernate with Scala - with less pain
 date: 2014-10-28
 comments: true
 ---
 
-**Note: If you want to stick with JPA only, this post might not be helpful.**
+**Note: If you want to stick with JPA only, this post might not be
+  helpful.**
+  
+**Another Note: updated for Hibernate 5**
 
 I have been working with the Spring framework and java for the majority of my professional career, so when I need to start working on a new project involving them, the choices are pretty much always clear. Persistence pretty much always means using Hibernate.
 
