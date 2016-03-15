@@ -6,19 +6,19 @@ comments: true
 ---
 
 On my last birthday, in September, I gifted myself a big stack of
-mathematics books. All of them very carefully chosen over a long
-period of time. For past 4 years or so, I have been trying to get back
-into learning math. And when I say "learning", I don't mean memorizing
-a bunch of formulas and spewing them out as required. No. What I
-wanted to do was really understand all the magical stuff that math
-seems to promise. Ever since I could understand them, I have been both
-fascinated and awed by mathematics (and physics).
+mathematics books. All carefully chosen over a long period of
+time. For past 4 years or so, I have been trying to get back into
+learning math. And when I say "learning", I don't mean memorizing a
+bunch of formulas. What I wanted to do was understand all the magical
+stuff math seems to promise.
 
-Maybe that awe was the reason I didn't start putting more efforts into
-learning math sooner; thinking that the field is just too exotic and
-hard to be studied in part time. Well, it might be if you want to
-become a professional mathematician. I don't. It's more like a hobby
-for me; and if it helps me professionally, all the better.
+Ever since I could understand them, I have been both fascinated and
+awed by mathematics (and physics).  Maybe that awe was the reason I
+didn't start putting more efforts into learning math sooner; thinking
+that the field is just too exotic and hard to be studied in part
+time. Well, it might be if you want to become a professional
+mathematician. I don't. It's more like a hobby for me; and if it helps
+me professionally, all the better.
 
 I started learning math sometime in 2010. A few hours every week. That
 petered out in about 3 months. After that, sometime in 2012, I read a
