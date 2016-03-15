@@ -3,7 +3,7 @@ description: Bhashit Parikh's blog. Programming, Learning, Books and Ranting.
 url: http://bhashitparikh.com
 
 markdown:  kramdown
-highlighter: pygments
+highlighter: rouge
 
 gems:
 - jemoji
