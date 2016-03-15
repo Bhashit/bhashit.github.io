@@ -26,11 +26,11 @@ This should work. And it does work, but I'll come to that later. So,
 after running this, when I tried to access the service via
 localhost:9090, all I got was "Remotely Closed" errors.
 
-I thought maybe I had made some mistake, which I had, to be
-honest. So, I looked around, Google and stuff, and I was sure that the
-service was running inside the container after connecting to the
-docker in an interactive terminal and checking stuff out. Nope, no
-issues there. The service was running fine.
+I thought maybe I had made some mistake, which I surely had, but
+coming to that later. So, I looked around, Google and stuff, and I was
+sure that the service was running inside the container after
+connecting to the docker in an interactive terminal and checking stuff
+out. Nope, no issues there. The service was running fine.
 
 Then, there was
 [this issue on github](https://github.com/docker/docker/issues/13914),
