@@ -7,27 +7,28 @@ comments: true
 
 Although liftweb is quite good at some things, one of the things it
 doesn't do well is dealing with scala/akka Futures in your HTML
-rendering code. If your snippet needs to handle some Futures before
-rendering the page, you'd be hard-pressed to find a _clean_ looking
-_generic_ solution.
+rendering code (snippets). If your snippet needs to handle some
+Futures before rendering the page, you'd be hard-pressed to find a
+_clean_ looking _generic_ solution.
 
 Lift provides something called [lazy-load][lazy-load] that can, not
 surprisingly, lazily render something on a different thread. It takes
 a normal snippet method, and executes it on a different thread using
 an actor, and renders it using a comet when it is finished
-executing. However, it doesn't handle a `Future[CssSel]`.. So, if you
-need to deal with a Future in a lazily loaded snippet, you'd still
+executing. However, it doesn't handle a `Future[CssSel]`. So, if you
+need to deal with a `Future` in a lazily loaded snippet, you'd still
 need to await its completion by blocking. Which is not something I'd
 like to do.
 
-Then, there is [this attempt][async-render] at another solution. Here,
-the initial rendering of your snippet puts some JS on the client-side,
-which then repeatedly polls the server for the result. This example
-uses lift's own LAFutures, but it can be easily adapted to use scala
-Futures.  Although, this is a pretty good solution, I would have liked
-something along the lines of LazyLoad snippet without having to do
-explicit polling. Especially because lift has great comet support, and
-that could be used to render the results when they become available.
+Then, there is [this solution][async-render] by one of the most
+respected people in Lift community. Here, the initial rendering of
+your snippet puts some JS on the client-side, which then repeatedly
+polls the server for the result. This example uses lift's own
+LAFutures, but it can be easily adapted to use scala Futures.
+Although, this is a pretty good solution, I would have liked something
+along the lines of LazyLoad snippet without having to do explicit
+polling. Especially because lift has great comet support, and that
+could be used to render the results when they become available.
 
 So, I put together a [little solution][repo] that uses the idea behind
 LazyLoad and allows me to use Futures as easily, and as cleanly, as
@@ -36,16 +37,16 @@ the "normal" snippet methods.
 The code is built on top of one of the stock sample templates that
 come with [lift 2.6 downloads](http://liftweb.net/download). I have
 added some comments that should hopefully make the code
-self-explanatory.
-
-Here's a gist of the basic ideas in this "solution":
+self-explanatory. Following is a gist of the basic ideas in this
+"solution".
 
 Let's say you have a method named `getDetails:
 Future[List[(String, String)]]` that returns some data from a
 web-service call, and you need to render it on the page. So, here's
 what you might have:
 
-```
+```scala
+
 class HelloWorld {
   
   def render(template: NodeSeq): NodeSeq = {
@@ -68,7 +69,7 @@ instead of a normal `CssSel` that a lift snippet method is expected to
 have. In order to make this work, you provide an extra layer above in
 the `render` method. Your HTML will refer to this `render` method.
 
-```
+```html
 
 <div data-lift="helloWorld.render"></div>
 
