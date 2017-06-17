@@ -31,6 +31,7 @@ used:
 
 ```scala
 object DependencyFactory extends Factory {
+  private val seq = new AtomicLong(0)
   
   object emailService extends FactoryMaker(emailServiceImpl)
   object sequenceNumberService extends FactoryMaker(seq.incrementAndGet _)
@@ -40,8 +41,6 @@ object DependencyFactory extends Factory {
     // A stub for local development
     case _ => new TestEmailService
   }
-  
-  private val seq = new AtomicLong(0)
 }
 
 ```
@@ -183,7 +182,6 @@ class Boot {
   LiftSession.afterSessionCreate = ((_: LiftSession, req: Req) => {
     DependencyFactory.awesomeService.session.set(new AwesomeService {})
   }) :: LiftSession.afterSessionCreate  
-  
   ...
 }
 
@@ -226,10 +224,10 @@ object DependencyFactory extends Factory {
   
   object instance extends FactoryMaker[DependencyFactory](DefaultInstance)
 
-  // Allow making calls directly on DependencyFactory companion object instead of
-  // having to use DependencyFactory.instance
-  implicit def dependencyFactoryToInstance(dft: DependencyFactory.type): DependencyFactory = instance.vend
-
+  // Allow making calls directly on DependencyFactory companion object
+  //instead of having to use DependencyFactory.instance
+  implicit def depFactoryToInstance(dft: DependencyFactory.type)
+    : DependencyFactory = instance.vend
   // you shouldn't write code that needs this, this is just an example
   def resetDefault = instance.default.set(DefaultInstance)
 }
@@ -267,7 +265,8 @@ One safe way of doing this is to use the stackable nature of the
 
 ```scala
 private val customDepFactory = new DependencyFactory {
-  override def cardServiceVendor: util.Vendor[CardService] = mock[CardService]
+  override def cardServiceVendor: Vendor[CardService] 
+    = mock[CardService]
 }
 
 DependencyFactory.instance.doWith(customDepFactory) {
