@@ -204,12 +204,13 @@ so). It's just scala code. There is no magic here.
 A trait that represents your `DependencyFactory`
 
 ```scala
+import net.liftweb.util.Vendor
+
 trait DependencyFactory extends Factory {
 
- implicit object cardService extends FactoryMaker(cardServiceVendor)
+ object cardService extends FactoryMaker(cardServiceVendor)
  ...
- 
- 
+  
  // the default implementation of card-service
  // this is the method you override when needed
  protected def cardServiceVendor: Vendor[CardService] = new PaymentCardService
@@ -246,7 +247,7 @@ class SomeSpec {
 
   override def beforeAll = DependencyFactory.instance.default.set({
     new DependencyFactory {
-      override def cardServiceVendor: util.Vendor[CardService] = mock[CardService]
+      override def cardServiceVendor: Vendor[CardService] = mock[CardService]
     }
   })
 
@@ -304,7 +305,7 @@ override with the custom implementation. For ex.
 ```scala
 class SomeSpec extends ... with DependencyOverrides {
   override val dependencyFactory: Vendor[DependencyFactory] = new DependencyFactory {
-    override def cardServiceVendor: util.Vendor[CardService] = mock[CardService]
+    override def cardServiceVendor: Vendor[CardService] = mock[CardService]
     // other overrides
     ...
   }
