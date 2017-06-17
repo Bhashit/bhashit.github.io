@@ -76,7 +76,8 @@ class SomeClass {
   private val emailService = DependencyFactory.emailService()
   // Or alternatively, if you don't have the FactoryMaker for a given type
   private val someType = 
-    DependencyFactory.inject[SomeType].openOrThrowException("No instance of SomeType found")
+    DependencyFactory.inject[SomeType]
+      .openOrThrowException("No instance of SomeType found")
 }
 ```
 
