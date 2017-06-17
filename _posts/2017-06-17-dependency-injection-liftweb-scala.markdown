@@ -12,8 +12,8 @@ would have preferred using Guice (or some other specific framework)
 for my DI needs. However, I think lift's built-in DI mechanisms are
 good enough for most of my needs, even with a project that has
 literally thousands of scala classes. Thanks to David Pollak's
-comments, I'd like to think that my eyes have been opened ;). The
-abstraction turtles have to end somewhere.
+comments, I (would like to) think that my eyes have been opened
+:wink:. The abstraction turtles have to end somewhere.
 
 I am writing this post to enumerate some basic DI utilities that lift
 has, since these don't seem to be well-documented.
