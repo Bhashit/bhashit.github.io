@@ -139,3 +139,4 @@ h2#footnotes {
 #sidebar a {color: #006064; }
 #sidebar a:hover { color: #008cba; }
 #sidebar { border-left: 1px dashed #e5e5e5; min-height: 400px; }
+#sidebar--icon-list { margin-bottom: 0; }
