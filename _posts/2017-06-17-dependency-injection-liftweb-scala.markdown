@@ -159,7 +159,6 @@ In your Boot.scala, which is used for instantiating and configuring
 various stuff in lift:
 
 ```scala
-
 class Boot {
 
   LiftSession.onBeginServicing = ((sess: LiftSession, req: Req) => {
@@ -181,7 +180,6 @@ created for the particular request.
 Similarly, you can do it for sessions in `Boot.scala`:
 
 ```scala
-
 class Boot {
 
   LiftSession.afterSessionCreate = ((_: LiftSession, req: Req) => {
@@ -210,7 +208,6 @@ so). It's just scala code. There is no magic here.
 A trait that represents your `DependencyFactory`
 
 ```scala
-
 trait DependencyFactory extends Factory {
 
  implicit object cardService extends FactoryMaker(cardServiceVendor)
@@ -224,7 +221,6 @@ trait DependencyFactory extends Factory {
  // other such vendors
  ...
 }
-
 
 object DependencyFactory extends Factory {
   // the default instance that will be used unless overridden
@@ -250,7 +246,6 @@ dependency graph. For ex. you could do this in your tests:
 
 
 ```scala
-
 class SomeSpec {
 
   override def beforeAll = DependencyFactory.instance.default.set({
@@ -273,7 +268,6 @@ One safe way of doing this is to use the stackable nature of the
 `Makers`:
 
 ```scala
-
 private val customDepFactory = new DependencyFactory {
   override def cardServiceVendor: util.Vendor[CardService] = mock[CardService]
 }
@@ -289,7 +283,6 @@ on how to do this without the added indentation though. For ex. you
 can do following with [scalatest][http://www.scalatest.org/]:
 
 ```scala
-
 trait DependencyOverrides extends SuiteMixin { self: Suite =>
 
   // Just override this and your tests will be executed with that overridden DependencyFactory instance.
@@ -312,7 +305,6 @@ really handy here. Any test where you need to provide a custom
 override with the custom implementation. For ex.
 
 ```scala
-
 class SomeSpec extends ... with DependencyOverrides {
   override val dependencyFactory: Vendor[DependencyFactory] = new DependencyFactory {
     override def cardServiceVendor: util.Vendor[CardService] = mock[CardService]
