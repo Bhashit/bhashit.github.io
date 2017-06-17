@@ -30,15 +30,13 @@ Let me just show you an example of how these two are supposed to be
 used:
 
 ```scala
-
 object DependencyFactory extends Factory {
   
   object emailService extends FactoryMaker(emailServiceImpl)
-  
   object sequenceNumberService extends FactoryMaker(seq.incrementAndGet _)
   
   private def emailServiceImpl: EmailService = Props.mode match {
-    case Props.RunModes.Production | Props.RunModes.Staging => new RealEmailService
+    case Props.RunModes.Production => new RealEmailService
     // A stub for local development
     case _ => new TestEmailService
   }
