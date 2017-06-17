@@ -98,7 +98,7 @@ your async snippet (`HelloWorld.render`) was called, you can pass its
 name to `AsyncRenderer#render`. If not, an instance will be setup
 automatically.
 
-The most important bit here is the [creation of
+The most important bit here is the creation of
 [a deferred function](https://github.com/Bhashit/liftweb-async-snippet-sample/blob/master/src/main/scala/code/lib/AsyncRenderer.scala#L47)
 that will apply your `Future[CssSel]` to the template. The
 `LiftSession.buildDeferredFunction` allows you to execute arbitrary
