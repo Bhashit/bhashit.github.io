@@ -336,11 +336,9 @@ dependencies. To [quote Antonio][antonio-reply] (with some modification):
 > checks for session-scoped overrides, which require synchronized
 > blocks. `Inject` doesn't have that overhead.
 
-You can see the
-locking
-[here][https://github.com/lift/framework/blob/5033c8798d4444f81996199c10ea330770e47fbc/web/webkit/src/main/scala/net/liftweb/http/Vars.scala#L114-L124]. This
-applies to `SessionVar` instances in general. So, there you go. Use
-`Inject` if you don't need the session/request scopes.
+You can see the locking [here][lift-sessvar-lock]. This applies to
+`SessionVar` instances in general. So, there you go. Use `Inject` if
+you don't need the session/request scopes.
 
 
 ## Conclusion
@@ -367,5 +365,6 @@ specific cases that can't be handled by lift's built-in DI.
 [fixtures]: http://www.scalatest.org/user_guide/sharing_fixtures
 [lift-group-post]: https://groups.google.com/forum/#!topic/liftweb/oWPhlwqAEDE
 [antonio-reply]: https://groups.google.com/forum/#!msg/liftweb/oWPhlwqAEDE/Jb4tWrzlAwAJ
+[lift-sessvar-lock]: https://github.com/lift/framework/blob/5033c8798d4444f81996199c10ea330770e47fbc/web/webkit/src/main/scala/net/liftweb/http/Vars.scala#L114-L124
 
 [^1]: It's also an instance of the `Vendor` trait, but that's not important here 
