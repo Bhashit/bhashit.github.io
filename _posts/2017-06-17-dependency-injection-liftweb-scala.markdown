@@ -16,7 +16,14 @@ comments, I (would like to) think that my eyes have been opened
 :grin:. The abstraction turtles have to end somewhere.
 
 I am writing this post to enumerate some basic DI utilities that lift
-has, since these don't seem to be well-documented.
+has, since these don't seem to be well-documented. This allows all
+the
+[four most commonly used scopes](https://docs.spring.io/spring/docs/current/spring-framework-reference/html/beans.html#beans-factory-scopes) that
+are possible with spring:
+[singleton][spring-di-singleton],
+[prototype][spring-di-prototype], [request][spring-di-request],
+and [session][spring-di-session]. The others can be achieved
+relatively easily if you want, but I won't focus on those.
 
 Lift's DI is based on two main traits [`Injector`][injector]
 and [`Maker`][maker]. However, most of the time, you won't need to
@@ -25,8 +32,15 @@ deal with them directly. The elements that you would use are:
 1. [`Factory`][factory] trait
 2. [`FactoryMaker`][factory-maker], which is an abstract class inside
    inside the [`Factory`] trait.
+3. [`Inject`][simple-inject], an abstract class within the
+   `SimpleInjector` trait.
    
-Let me just show you an example of how these two are supposed to be
+`FactoryMaker` and `Injector` serve the same purpose, with the former
+having more features. The difference is important. Notes on this are
+at the end. I'll continue with `FactoryMaker` for the sake of
+examples, and then note the differences between the two at the end.
+   
+To start with, here's an example of how these are supposed to be
 used:
 
 ```scala
@@ -193,7 +207,7 @@ That's pretty much it.
 
 The above cases handle most of the stuff you will need. When testing,
 all of your tests might need to mock some of the services, without
-affecting other tests. Doing this manually would be a nightmarish,
+affecting other tests. Doing this manually would be nightmarish,
 extremely prone to errors. The way to do it is to have isolated
 dependency graph for your tests. The key is realizing that the
 `DependencyFactory` could be just a normal scala instance that itself
@@ -273,12 +287,11 @@ private val customDepFactory = new DependencyFactory {
 DependencyFactory.instance.doWith(customDepFactory) {
   // write all your tests here
 }
-
 ```
 
 And this would work as expected. You can try to come up with variation
 on how to do this without the added indentation though. For ex. you
-can do following with [scalatest][http://www.scalatest.org/]:
+can do following with [scalatest](http://www.scalatest.org/):
 
 ```scala
 trait DependencyOverrides extends SuiteMixin { self: Suite =>
@@ -291,10 +304,8 @@ trait DependencyOverrides extends SuiteMixin { self: Suite =>
     DependencyFactory.instance.doWith(dependencyFactory.vend) {
       super.withFixture(test)
     }
-  }
-  
+  } 
 }
-
 ```
 
 Scalatest has something called [fixtures][fixtures] that comes in
@@ -310,8 +321,30 @@ class SomeSpec extends ... with DependencyOverrides {
     ...
   }
 }
-
 ```
+
+## Differences between `FactoryMaker` and `Inject`
+
+You can also declare your dependencies using
+the [`Inject`][simple-inject] class, exactly like the
+`FactoryMaker`. For ex.
+
+```scala
+object cardServiceFactoryMaker extends FactoryMaker(cardServiceVendor)
+
+object cardServiceInject extends Inject(cardServiceVendor)
+```
+
+Both of these can be identically used, with one major
+difference: `Inject` doesn't have session/request scoped
+dependencies. To [quote Antonio][antonio-reply] (with some modification):
+
+> `FactoryMaker` can have a very high overhead for simple injection
+> needs (on the order of 100+ms I think) due to the fact that it
+> checks for session/request scoped overrides, which require
+> synchronized blocks. `Inject` doesn't have that overhead.
+
+So,there you go. Use `Inject` if you don't need the session/request scopes.
 
 ## Conclusion
 
@@ -325,6 +358,7 @@ specific cases that can't be handled by lift's built-in DI.
 [maker]: https://liftweb.net/api/26/api/index.html#net.liftweb.util.Maker
 [factory]: https://liftweb.net/api/26/api/index.html#net.liftweb.http.Factory
 [factory-maker]: https://github.com/lift/framework/blob/5033c8798d4444f81996199c10ea330770e47fbc/web/webkit/src/main/scala/net/liftweb/http/Factory.scala#L37
+[simple-inject]: https://liftweb.net/api/26/api/index.html#net.liftweb.util.SimpleInjector$Inject
 [function0]: http://www.scala-lang.org/api/current/scala/Function0.html
 [sess-var]: https://liftweb.net/api/26/api/index.html#net.liftweb.http.SessionVar
 [req-var]: https://liftweb.net/api/26/api/index.html#net.liftweb.http.RequestVar
@@ -334,5 +368,7 @@ specific cases that can't be handled by lift's built-in DI.
 [spring-di-session]: https://docs.spring.io/spring/docs/current/spring-framework-reference/html/beans.html#beans-factory-scopes-session
 [spring-di-request]: https://docs.spring.io/spring/docs/current/spring-framework-reference/html/beans.html#beans-factory-scopes-request
 [fixtures]: http://www.scalatest.org/user_guide/sharing_fixtures
+[lift-group-post]: https://groups.google.com/forum/#!topic/liftweb/oWPhlwqAEDE
+[antonio-reply]: https://groups.google.com/forum/#!msg/liftweb/oWPhlwqAEDE/Jb4tWrzlAwAJ
 
 [^1]: It's also an instance of the `Vendor` trait, but that's not important here 
