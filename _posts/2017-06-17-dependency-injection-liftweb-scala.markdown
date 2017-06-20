@@ -336,7 +336,12 @@ dependencies. To [quote Antonio][antonio-reply] (with some modification):
 > checks for session-scoped overrides, which require synchronized
 > blocks. `Inject` doesn't have that overhead.
 
-So,there you go. Use `Inject` if you don't need the session/request scopes.
+You can see the
+locking
+[here][https://github.com/lift/framework/blob/5033c8798d4444f81996199c10ea330770e47fbc/web/webkit/src/main/scala/net/liftweb/http/Vars.scala#L114-L124]. This
+applies to `SessionVar` instances in general. So, there you go. Use
+`Inject` if you don't need the session/request scopes.
+
 
 ## Conclusion
 
