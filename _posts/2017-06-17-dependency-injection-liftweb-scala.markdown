@@ -315,7 +315,7 @@ class SomeSpec extends ... with DependencyOverrides {
 }
 ```
 
-## Differences between `FactoryMaker` and `Inject`
+## Differences between FactoryMaker and Inject
 
 You can also declare your dependencies using
 the [`Inject`][simple-inject] class, exactly like the
