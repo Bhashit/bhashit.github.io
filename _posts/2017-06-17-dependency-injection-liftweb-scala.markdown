@@ -171,14 +171,12 @@ various stuff in lift:
 
 ```scala
 class Boot {
-
   LiftSession.onBeginServicing = ((sess: LiftSession, req: Req) => {
     DependencyFactory.awesomeService.request.set(new AwesomeService {})
   }) :: LiftSession.onBeginServicing
 
   ...
 }
-
 ```
 
 This will set a new instance on every request, right at the beginning
@@ -192,13 +190,11 @@ Similarly, you can do it for sessions in `Boot.scala`:
 
 ```scala
 class Boot {
-
   LiftSession.afterSessionCreate = ((_: LiftSession, req: Req) => {
     DependencyFactory.awesomeService.session.set(new AwesomeService {})
   }) :: LiftSession.afterSessionCreate  
   ...
 }
-
 ```
 
 That's pretty much it.
@@ -246,7 +242,6 @@ object DependencyFactory extends Factory {
   // you shouldn't write code that needs this, this is just an example
   def resetDefault = instance.default.set(DefaultInstance)
 }
-
 ```
 
 Now, when you do `DependencyFactory.cardService.vend`, it will using
@@ -258,7 +253,6 @@ dependency graph. For ex. you could do this in your tests:
 
 ```scala
 class SomeSpec {
-
   override def beforeAll = DependencyFactory.instance.default.set({
     new DependencyFactory {
       override def cardServiceVendor: Vendor[CardService] = mock[CardService]
@@ -267,7 +261,6 @@ class SomeSpec {
 
   override def afterAll: Unit = DependencyFactory.resetDefault
 }
-
 ```
 
 However, there is a possible problem with this approach (I haven't
