@@ -56,7 +56,6 @@ object DependencyFactory extends Factory {
     case _ => new TestEmailService
   }
 }
-
 ```
 
 This defines two managed dependencies. In the case of the
