@@ -334,8 +334,8 @@ dependencies. To [quote Antonio][antonio-reply] (with some modification):
 
 > `FactoryMaker` can have a very high overhead for simple injection
 > needs (on the order of 100+ms I think) due to the fact that it
-> checks for session/request scoped overrides, which require
-> synchronized blocks. `Inject` doesn't have that overhead.
+> checks for session-scoped overrides, which require synchronized
+> blocks. `Inject` doesn't have that overhead.
 
 So,there you go. Use `Inject` if you don't need the session/request scopes.
 
