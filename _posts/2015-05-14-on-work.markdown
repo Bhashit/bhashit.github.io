@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Some offhand notes on working
+title: Some notes on working
 date: 2015-05-14
 comments: true
 ---
@@ -50,8 +50,8 @@ in my life.
 
 Too much of *non-productive* time also begins to feel a little
 boring. And by productive, *I just don't mean earning money*. It could
-be anything, like learning math, learning to invest, teaching to
-somebody, or even writing a blog post, or just thinking about
+be anything, like learning math, learning to invest, teaching, 
+or even writing a blog post, or just thinking about
 something you read. People who have a lot of free time are the people
 who are waiting for the updates of the like-count on their facebook
 posts. These are the people who become dependent on others to build
@@ -71,7 +71,7 @@ something that pays your bills is extremely important. And no matter
 what your hobbies are, be it climbing the Everest, or trolling others
 on the internet, everything costs money. So, I have no delusions about
 that. All I am saying is that hoarding money so that you can retire
-comfortably and sail into the sunset with your trophy wife, is a dream
+comfortably and sail into the sunset is a dream
 that generally fails to materialize.
 
 This is also **not** an argument against hard work. I think hard work
