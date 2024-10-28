@@ -6,7 +6,7 @@ comments: true
 ---
 
 <figure>
-  <img src="{{site.url}}/img/re-reading-river.jpg" alt="River flowing at sunset with a Heron"/>
+  <img src="{{site.url}}/img/re-reading-river_resized.jpg" alt="River flowing at sunset with a Heron"/>
   <figcaption>Photo by <a href="https://unsplash.com/@binaryben?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Ben Clayton</a> on <a href="https://unsplash.com/photos/a-person-standing-in-a-river-at-sunset-1jSzSeyDMEk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></figcaption>
 </figure>
 
