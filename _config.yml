@@ -1,6 +1,6 @@
 name: Bhashit Parikh's blog
 description: Bhashit Parikh's blog. Programming, Learning, Books and Ranting.
-url: http://bhashitparikh.com
+url: https://bhashit.sh
 
 markdown:  kramdown
 highlighter: rouge
