@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Some notes on working
+title: On working
 date: 2015-05-14
 comments: true
 ---
 
-When I left my job to try some new stuff, I got some decent investment
+When I left my job to try some new stuff (build a product), I got some decent investment
 offers, but I decided that doing some consulting work to sustain
 myself was better when I didn't even have a concrete plan. My ideas
 for a product didn't quite materialize since I gradually started
-losing my excitement for them.  realized that I just wasn't an
+losing my excitement for them.  realized that I just wasn't
 entrepreneur material. 
 
 Meanwhile, I was also getting some decent projects to work on as a
